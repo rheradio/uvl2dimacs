@@ -51,29 +51,44 @@ if [ ! -f "$CLI" ]; then
     exit 1
 fi
 
-if [ ! -f "$BACKBONE_SOLVER" ]; then
-    echo -e "${RED}Error: backbone_solver not found at $BACKBONE_SOLVER${NC}"
+# Function to build backbone_solver from scratch (including MiniSat)
+build_backbone_solver() {
     echo "Building backbone_solver with $CXX_COMPILER..."
-    cd "$PROJECT_ROOT/backbone_solver/src" && make clean && make CXX="$CXX_COMPILER" >/dev/null 2>&1
-    if [ $? -ne 0 ]; then
+    cd "$PROJECT_ROOT/backbone_solver/src"
+
+    # Clean everything including MiniSat to handle cross-platform builds
+    echo "Cleaning previous build artifacts..."
+    make distclean >/dev/null 2>&1 || true
+
+    # Build (this will also build MiniSat if needed)
+    echo "Compiling..."
+    if ! make CXX="$CXX_COMPILER" 2>&1; then
         echo -e "${RED}Failed to build backbone_solver${NC}"
+        echo "Check compiler output above for details"
+        cd "$SCRIPT_DIR"
+        return 1
+    fi
+
+    cd "$SCRIPT_DIR"
+    echo -e "${GREEN}backbone_solver built successfully${NC}"
+    return 0
+}
+
+if [ ! -f "$BACKBONE_SOLVER" ]; then
+    echo -e "${YELLOW}backbone_solver not found at $BACKBONE_SOLVER${NC}"
+    if ! build_backbone_solver; then
         exit 1
     fi
-    cd "$SCRIPT_DIR"
-    echo "backbone_solver built successfully"
 fi
 
 # Check if backbone_solver is executable and for the correct architecture
+# This catches cases where binary was built on a different platform (e.g., macOS vs Linux)
 if ! "$BACKBONE_SOLVER" --help >/dev/null 2>&1 && ! "$BACKBONE_SOLVER" -h >/dev/null 2>&1; then
     echo -e "${YELLOW}Warning: backbone_solver is not executable or wrong architecture${NC}"
-    echo "Rebuilding backbone_solver for current system with $CXX_COMPILER..."
-    cd "$PROJECT_ROOT/backbone_solver/src" && make clean && make CXX="$CXX_COMPILER" >/dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}Failed to build backbone_solver${NC}"
+    echo "This usually happens when switching between macOS and Linux."
+    if ! build_backbone_solver; then
         exit 1
     fi
-    cd "$SCRIPT_DIR"
-    echo "backbone_solver rebuilt successfully"
 fi
 
 if [ ! -d "$UVL_DIR" ]; then

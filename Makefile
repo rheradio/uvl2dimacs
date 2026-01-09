@@ -33,7 +33,7 @@ DOCS_DIR := $(PROJECT_ROOT)/docs
 
 # Default target
 .PHONY: all
-all: antlr4-runtime uvl2dimacs api examples sharpsat
+all: antlr4-runtime uvl2dimacs api examples sharpsat backbone_solver
 
 # Help target
 .PHONY: help
@@ -48,9 +48,10 @@ help:
 	@echo "  api              - Build API library"
 	@echo "  examples         - Build API examples (simple_convert, batch_convert)"
 	@echo "  sharpsat         - Build SharpSAT-TD model counter"
+	@echo "  backbone_solver  - Build backbone solver for tests"
 	@echo "  test             - Build and run tests"
 	@echo "  clean            - Clean build artifacts"
-	@echo "  clean-all        - Clean everything including ANTLR4"
+	@echo "  clean-all        - Clean everything including ANTLR4 and all dependencies"
 	@echo "  clean-docs       - Clean documentation"
 	@echo "  install          - Install uvl2dimacs binary and examples"
 	@echo ""
@@ -169,6 +170,37 @@ $(SHARPSAT_BIN):
 	@echo "SharpSAT-TD built successfully: $(SHARPSAT_BIN)"
 	@echo ""
 
+# Build backbone solver for tests
+BACKBONE_DIR := $(PROJECT_ROOT)/backbone_solver
+BACKBONE_SRC := $(BACKBONE_DIR)/src
+BACKBONE_BIN := $(BACKBONE_DIR)/bin/backbone_solver
+
+.PHONY: backbone_solver
+backbone_solver: $(BACKBONE_BIN)
+
+$(BACKBONE_BIN):
+	@echo "========================================="
+	@echo "Building Backbone Solver..."
+	@echo "========================================="
+	@if [ ! -f "$(BACKBONE_SRC)/Makefile" ]; then \
+		echo "Error: Backbone solver source not found in $(BACKBONE_SRC)"; \
+		exit 1; \
+	fi
+	@# Detect compiler based on OS
+	@if [ "$$(uname)" = "Darwin" ]; then \
+		CXX_COMPILER="clang++"; \
+	elif command -v g++ >/dev/null 2>&1; then \
+		CXX_COMPILER="g++"; \
+	elif command -v clang++ >/dev/null 2>&1; then \
+		CXX_COMPILER="clang++"; \
+	else \
+		echo "Error: No C++ compiler found (tried g++ and clang++)"; \
+		exit 1; \
+	fi && \
+	cd $(BACKBONE_SRC) && $(MAKE) CXX="$$CXX_COMPILER"
+	@echo "Backbone solver built successfully: $(BACKBONE_BIN)"
+	@echo ""
+
 # Build and run tests
 .PHONY: test
 test: uvl2dimacs
@@ -208,13 +240,17 @@ clean:
 	@rm -f test_output.dimacs
 	@echo "Clean complete"
 
-# Clean everything including ANTLR4
+# Clean everything including ANTLR4 and all dependencies
 .PHONY: clean-all
 clean-all: clean clean-docs
 	@echo "Cleaning ANTLR4 runtime..."
 	@rm -rf $(ANTLR4_BUILD)
 	@echo "Cleaning SharpSAT-TD..."
 	@rm -rf $(SHARPSAT_BUILD)
+	@echo "Cleaning Backbone Solver (including MiniSat)..."
+	@if [ -f "$(BACKBONE_SRC)/Makefile" ]; then \
+		cd $(BACKBONE_SRC) && $(MAKE) distclean 2>/dev/null || true; \
+	fi
 	@echo "Clean all complete"
 
 # Clean documentation
@@ -265,7 +301,9 @@ info:
 	@echo "UVL Parser:      $(UVL_PARSER_DIR)"
 	@echo ""
 	@echo "Build Status:"
-	@echo "  ANTLR4 Runtime: $$([ -f "$(ANTLR4_LIB)" ] && echo "Built" || echo "Not built")"
-	@echo "  UVL Parser:     $$([ -d "$(UVL_CPP_DIR)/include" ] && echo "Generated" || echo "Not generated")"
-	@echo "  uvl2dimacs:     $$([ -f "$(BUILD_DIR)/uvl2dimacs" ] && echo "Built" || echo "Not built")"
-	@echo "  Documentation:  $$([ -d "$(DOCS_DIR)/html" ] && echo "Generated" || echo "Not generated")"
+	@echo "  ANTLR4 Runtime:    $$([ -f "$(ANTLR4_LIB)" ] && echo "Built" || echo "Not built")"
+	@echo "  UVL Parser:        $$([ -d "$(UVL_CPP_DIR)/include" ] && echo "Generated" || echo "Not generated")"
+	@echo "  uvl2dimacs:        $$([ -f "$(BUILD_DIR)/uvl2dimacs" ] && echo "Built" || echo "Not built")"
+	@echo "  SharpSAT-TD:       $$([ -f "$(SHARPSAT_BIN)" ] && echo "Built" || echo "Not built")"
+	@echo "  Backbone Solver:   $$([ -f "$(BACKBONE_BIN)" ] && echo "Built" || echo "Not built")"
+	@echo "  Documentation:     $$([ -d "$(DOCS_DIR)/html" ] && echo "Generated" || echo "Not generated")"

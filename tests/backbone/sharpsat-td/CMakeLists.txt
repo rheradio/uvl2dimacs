@@ -19,7 +19,22 @@ endif(STATIC)
 set(CMAKE_CXX_FLAGS "-std=c++11 -O3 -Wall -Wextra -Wshadow -g -Wfatal-errors -Wno-sign-compare -Wno-literal-suffix")
 
 # Add CPU instruction flags for clhash (PCLMUL, AES, SSSE3 instructions)
-SET(CMAKE_C_FLAGS "-std=c99 -Wall -mpclmul -maes -mssse3")
+# These are x86_64-specific, so only add them on x86/AMD64 processors
+SET(CMAKE_C_FLAGS "-std=c99 -Wall")
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|AMD64|amd64|i386|i686")
+    message(STATUS "Building for x86/AMD64 architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    # Only add advanced instructions on 64-bit x86
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|AMD64|amd64")
+        SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mpclmul -maes -mssse3")
+        message(STATUS "Enabling x86_64 SIMD instructions (PCLMUL, AES, SSSE3)")
+    endif()
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64|arm64|ARM64")
+    message(STATUS "Building for ARM64 architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    message(STATUS "Will use sse2neon for x86 intrinsics compatibility")
+else()
+    message(WARNING "Unknown architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    message(WARNING "Build may fail if clhash.c uses unsupported intrinsics")
+endif()
 
 # Look for locally built dependencies first
 set(LOCAL_DEPS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../third_party/math_libs/install")
@@ -71,3 +86,15 @@ if(STATIC)
 SET_TARGET_PROPERTIES (flow_cutter_pace17 PROPERTIES LINK_SEARCH_START_STATIC 1)
 endif(STATIC)
 target_link_libraries (flow_cutter_pace17 libflowcutter)
+
+# Install binaries to bin directory for test script compatibility
+install(TARGETS sharpSAT flow_cutter_pace17
+        RUNTIME DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
+# Add custom command to copy binaries after build (for convenience)
+add_custom_command(TARGET sharpSAT POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_SOURCE_DIR}/bin
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:sharpSAT> ${CMAKE_CURRENT_SOURCE_DIR}/bin/
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:flow_cutter_pace17> ${CMAKE_CURRENT_SOURCE_DIR}/bin/
+    COMMENT "Copying binaries to bin directory"
+)
