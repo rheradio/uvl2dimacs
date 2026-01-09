@@ -1,7 +1,0 @@
-<map id="to_string" name="to_string">
-<area shape="rect" id="Node000001" title="Creates a string representation of the CNF model." alt="" coords="5,31,84,56"/>
-<area shape="rect" id="Node000002" href="$classCNFModel.html#a6a996ad83d35b9370de6c7a608971df7" title="Gets the total number of clauses." alt="" coords="138,5,273,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,35,124,28,125,33,85,40"/>
-<area shape="rect" id="Node000003" href="$classCNFModel.html#a26d88999e87506faaf8f49c8a456c0aa" title="Gets the total number of variables." alt="" coords="132,55,279,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,47,118,52,118,57,84,52"/>
-</map>

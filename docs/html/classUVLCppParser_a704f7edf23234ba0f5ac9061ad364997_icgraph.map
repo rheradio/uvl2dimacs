@@ -1,6 +1,0 @@
-<map id="multiplicativeExpression" name="multiplicativeExpression">
-<area shape="rect" id="Node000001" title=" " alt="" coords="200,29,383,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="329,20,319,11,291,8,269,10,257,15,255,20,261,28,257,31,249,21,253,11,268,5,291,3,321,6,332,15"/>
-<area shape="rect" id="Node000002" href="$classUVLCppParser.html#aee84303a25ef9d01b98d2e22b49b7a99" title=" " alt="" coords="5,29,152,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,45,152,45,152,39,186,39"/>
-</map>

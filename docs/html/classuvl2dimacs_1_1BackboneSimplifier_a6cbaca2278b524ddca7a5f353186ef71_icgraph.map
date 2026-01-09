@@ -1,7 +1,0 @@
-<map id="get_removed_clauses" name="get_removed_clauses">
-<area shape="rect" id="Node000001" title=" " alt="" coords="241,42,405,67"/>
-<area shape="rect" id="Node000002" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a72ec653c82203c79c6967992cdec6768" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,5,193,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,45,193,40,194,35,228,39"/>
-<area shape="rect" id="Node000003" href="$uvl2dimacs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="72,70,127,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,69,127,82,126,77,227,64"/>
-</map>

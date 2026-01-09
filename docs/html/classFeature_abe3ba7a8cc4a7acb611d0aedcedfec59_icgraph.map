@@ -1,5 +1,0 @@
-<map id="add_relation" name="add_relation">
-<area shape="rect" id="Node000001" title="Adds an existing relation to this feature." alt="" coords="156,5,259,31"/>
-<area shape="rect" id="Node000002" href="$classFeature.html#aab4ef2f72186538788ff5d8120c5b454" title="Creates and adds a new relation with specified children." alt="" coords="5,5,108,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,21,108,21,108,15,142,15"/>
-</map>
