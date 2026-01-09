@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.5)
 project (SHARPSAT) 
 
 option(STATIC "STATIC" OFF)
@@ -18,11 +18,32 @@ endif(STATIC)
 
 set(CMAKE_CXX_FLAGS "-std=c++11 -O3 -Wall -Wextra -Wshadow -g -Wfatal-errors -Wno-sign-compare -Wno-literal-suffix")
 
-SET(CMAKE_C_FLAGS "-std=c99 -Wall -msse4.1 -mpclmul")
+# Add CPU instruction flags for clhash (PCLMUL, AES, SSSE3 instructions)
+SET(CMAKE_C_FLAGS "-std=c99 -Wall -mpclmul -maes -mssse3")
 
-find_library(GMP_LIB gmp)
-find_library(GMPXX_LIB gmpxx)
-find_library(MPFR_LIB mpfr)
+# Look for locally built dependencies first
+set(LOCAL_DEPS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../third_party/math_libs/install")
+
+if(EXISTS "${LOCAL_DEPS_DIR}/lib/libgmp.a")
+    message(STATUS "Using local GMP/MPFR libraries from ${LOCAL_DEPS_DIR}")
+    include_directories(${LOCAL_DEPS_DIR}/include)
+    set(GMP_LIB "${LOCAL_DEPS_DIR}/lib/libgmp.a")
+    set(GMPXX_LIB "${LOCAL_DEPS_DIR}/lib/libgmpxx.a")
+    set(MPFR_LIB "${LOCAL_DEPS_DIR}/lib/libmpfr.a")
+else()
+    # Fall back to system libraries
+    message(STATUS "Using system GMP/MPFR libraries")
+
+    # Add Homebrew paths for macOS
+    if(APPLE)
+        include_directories(/opt/homebrew/include)
+        link_directories(/opt/homebrew/lib)
+    endif()
+
+    find_library(GMP_LIB gmp REQUIRED)
+    find_library(GMPXX_LIB gmpxx REQUIRED)
+    find_library(MPFR_LIB mpfr REQUIRED)
+endif()
 
 add_definitions( -DMPFR_USE_NO_MACRO )
 add_subdirectory(flowcutter)

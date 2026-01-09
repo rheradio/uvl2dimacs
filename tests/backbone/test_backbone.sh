@@ -18,6 +18,22 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Detect OS and set appropriate compiler
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    CXX_COMPILER="clang++"
+else
+    # Linux and others - try g++ first, fall back to clang++
+    if command -v g++ >/dev/null 2>&1; then
+        CXX_COMPILER="g++"
+    elif command -v clang++ >/dev/null 2>&1; then
+        CXX_COMPILER="clang++"
+    else
+        echo -e "${RED}Error: No C++ compiler found (tried g++ and clang++)${NC}"
+        exit 1
+    fi
+fi
+
 # Get script directory and project root
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -42,10 +58,78 @@ if [ ! -f "$CLI" ]; then
     exit 1
 fi
 
+# Function to build GMP and MPFR dependencies locally
+build_dependencies() {
+    local deps_script="$PROJECT_ROOT/third_party/build_gmp_mpfr.sh"
+    local install_dir="$PROJECT_ROOT/third_party/math_libs/install"
+
+    # Check if already built
+    if [ -f "$install_dir/lib/libgmp.a" ] && [ -f "$install_dir/lib/libmpfr.a" ]; then
+        return 0
+    fi
+
+    echo "Building GMP and MPFR dependencies locally..."
+    if [ ! -f "$deps_script" ]; then
+        echo -e "${RED}Error: Dependency build script not found at $deps_script${NC}"
+        exit 1
+    fi
+
+    bash "$deps_script"
+    local result=$?
+
+    if [ $result -ne 0 ]; then
+        echo -e "${RED}Failed to build dependencies${NC}"
+        exit 1
+    fi
+}
+
+# Function to build SharpSAT-TD
+build_sharpsat() {
+    echo "Building SharpSAT-TD for current system..."
+
+    # Build local dependencies first
+    build_dependencies
+
+    # Build using CMake
+    local sharpsat_dir="$PROJECT_ROOT/tests/backbone/sharpsat-td"
+    local build_dir="$sharpsat_dir/build"
+
+    rm -rf "$build_dir"
+    mkdir -p "$build_dir"
+
+    cd "$build_dir" && \
+        cmake -DCMAKE_BUILD_TYPE=Release .. && \
+        make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
+
+    local result=$?
+    cd "$SCRIPT_DIR"
+
+    if [ $result -ne 0 ]; then
+        echo -e "${RED}Failed to build SharpSAT-TD${NC}"
+        echo "Check the error messages above for details"
+        exit 1
+    fi
+
+    echo -e "${GREEN}SharpSAT-TD built successfully${NC}"
+}
+
+# Check if SharpSAT exists and is executable
 if [ ! -f "$SHARPSAT" ]; then
-    echo -e "${RED}Error: SharpSAT-TD not found at $SHARPSAT${NC}"
-    echo "Please build SharpSAT-TD with: make sharpsat"
-    exit 1
+    echo -e "${YELLOW}SharpSAT-TD not found at $SHARPSAT${NC}"
+    build_sharpsat
+fi
+
+# Check if SharpSAT is executable for the current architecture
+if [ ! -x "$SHARPSAT" ] || ! "$SHARPSAT" -h >/dev/null 2>&1; then
+    echo -e "${YELLOW}Warning: SharpSAT-TD is not executable or wrong architecture${NC}"
+    build_sharpsat
+
+    # Verify it works now
+    if ! "$SHARPSAT" -h >/dev/null 2>&1; then
+        echo -e "${RED}Error: SharpSAT-TD still cannot run after rebuild${NC}"
+        echo "Please check dependencies and build manually with: make sharpsat"
+        exit 1
+    fi
 fi
 
 if [ ! -d "$DIMACS_DIR" ]; then
@@ -59,14 +143,22 @@ fi
 count_solutions() {
     local dimacs_file="$1"
     local output_file="$TEMP_DIR/sharpsat_output_$$.txt"
+    local original_dir="$(pwd)"
+
+    # Get absolute path to DIMACS file
+    local abs_dimacs_file="$(cd "$(dirname "$dimacs_file")" && pwd)/$(basename "$dimacs_file")"
 
     # Run SharpSAT from its bin directory (requires flow_cutter_pace17 in same dir)
-    cd "$PROJECT_ROOT/tests/backbone/sharpsat-td/bin"
-    ./sharpSAT -decot 1 -tmpdir "$TEMP_DIR" "$dimacs_file" > "$output_file" 2>&1
+    cd "$PROJECT_ROOT/tests/backbone/sharpsat-td/bin" || {
+        echo "ERROR"
+        return 1
+    }
+
+    ./sharpSAT -decot 1 -tmpdir "$TEMP_DIR" "$abs_dimacs_file" > "$output_file" 2>&1
     local exit_code=$?
 
     # Return to original directory
-    cd - > /dev/null
+    cd "$original_dir" || true
 
     # Check if unsatisfiable
     if grep -q "^s UNSATISFIABLE" "$output_file"; then

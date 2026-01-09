@@ -15,6 +15,22 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Detect OS and set appropriate compiler
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    CXX_COMPILER="clang++"
+else
+    # Linux and others - try g++ first, fall back to clang++
+    if command -v g++ >/dev/null 2>&1; then
+        CXX_COMPILER="g++"
+    elif command -v clang++ >/dev/null 2>&1; then
+        CXX_COMPILER="clang++"
+    else
+        echo -e "${RED}Error: No C++ compiler found (tried g++ and clang++)${NC}"
+        exit 1
+    fi
+fi
+
 # Get script directory and project root
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -37,8 +53,27 @@ fi
 
 if [ ! -f "$BACKBONE_SOLVER" ]; then
     echo -e "${RED}Error: backbone_solver not found at $BACKBONE_SOLVER${NC}"
-    echo "Please ensure backbone_solver is built"
-    exit 1
+    echo "Building backbone_solver with $CXX_COMPILER..."
+    cd "$PROJECT_ROOT/backbone_solver/src" && make clean && make CXX="$CXX_COMPILER" >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to build backbone_solver${NC}"
+        exit 1
+    fi
+    cd "$SCRIPT_DIR"
+    echo "backbone_solver built successfully"
+fi
+
+# Check if backbone_solver is executable and for the correct architecture
+if ! "$BACKBONE_SOLVER" --help >/dev/null 2>&1 && ! "$BACKBONE_SOLVER" -h >/dev/null 2>&1; then
+    echo -e "${YELLOW}Warning: backbone_solver is not executable or wrong architecture${NC}"
+    echo "Rebuilding backbone_solver for current system with $CXX_COMPILER..."
+    cd "$PROJECT_ROOT/backbone_solver/src" && make clean && make CXX="$CXX_COMPILER" >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to build backbone_solver${NC}"
+        exit 1
+    fi
+    cd "$SCRIPT_DIR"
+    echo "backbone_solver rebuilt successfully"
 fi
 
 if [ ! -d "$UVL_DIR" ]; then
@@ -80,16 +115,24 @@ extract_and_filter_backbone() {
     fi
 
     # Use Python to extract and filter backbone
-    python3 <<EOF
+    python3 - "$temp_output" "$dimacs_file" <<'EOF'
 import re
 import sys
 
+# Get file paths from command line arguments
+if len(sys.argv) != 3:
+    print("ERROR", file=sys.stderr)
+    sys.exit(1)
+
+temp_output = sys.argv[1]
+dimacs_file = sys.argv[2]
+
 # Read backbone solver output
 try:
-    with open('$temp_output', 'r') as f:
+    with open(temp_output, 'r') as f:
         output = f.read()
-except:
-    print("ERROR", file=sys.stderr)
+except Exception as e:
+    print(f"ERROR reading {temp_output}: {e}", file=sys.stderr)
     sys.exit(1)
 
 # Remove ANSI escape codes
@@ -111,7 +154,7 @@ if not backbone:
 # Read variable mappings from DIMACS file
 var_map = {}
 try:
-    with open('$dimacs_file', 'r') as f:
+    with open(dimacs_file, 'r') as f:
         for line in f:
             if line.startswith('c '):
                 parts = line.split()
@@ -123,8 +166,8 @@ try:
                         var_map[var_id] = var_name
                     except ValueError:
                         pass
-except:
-    print("ERROR", file=sys.stderr)
+except Exception as e:
+    print(f"ERROR reading {dimacs_file}: {e}", file=sys.stderr)
     sys.exit(1)
 
 # Filter auxiliary variables and sort

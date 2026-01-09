@@ -62,18 +62,18 @@ CCFLAGS += -I. -I$(CLI_DIR) -I$(API_DIR) -I$(DETECTORS_DIR) -I$(CORE_DIR) -I$(IO
 
 # Compiler-specific flags
 ifeq ($(COMPILER),gcc)
-    # GCC-specific optimizations
-    CCFLAGS += -flto=auto -ftree-vectorize -fvect-cost-model=unlimited -ftree-loop-if-convert-stores
+    # GCC-specific optimizations (LTO disabled for compatibility)
+    CCFLAGS += -ftree-vectorize -fvect-cost-model=unlimited -ftree-loop-if-convert-stores
     CCFLAGS += -funswitch-loops -ftree-loop-distribution -fsplit-loops -fpeel-loops
     CCFLAGS += -fweb -frename-registers
-    CCFLAGS += -fpredictive-commoning -fgcse-after-reload -fipa-pta
-    CCFLAGS += -fdevirtualize-at-ltrans -fmodulo-sched -fmodulo-sched-allow-regmoves
+    CCFLAGS += -fpredictive-commoning -fgcse-after-reload
+    CCFLAGS += -fmodulo-sched -fmodulo-sched-allow-regmoves
     CCFLAGS += -ftree-partial-pre -fivopts -fgcse-sm -fgcse-las
     CCFLAGS += -ftracer -fbranch-target-load-optimize2 -fno-plt
-    CCFLAGS += -fno-semantic-interposition -fipa-icf -fipa-icf-functions -fipa-icf-variables
+    CCFLAGS += -fno-semantic-interposition
 
-    # GCC-specific linker flags
-    LNFLAGS := -flto=auto -fuse-linker-plugin -Wl,-O3
+    # GCC-specific linker flags (LTO disabled for compatibility)
+    LNFLAGS := -Wl,-O3
 
     # Platform-specific linker flags for GCC
     ifeq ($(shell uname),Darwin)
@@ -83,8 +83,7 @@ ifeq ($(COMPILER),gcc)
         # Linux linker flags
         LNFLAGS += -Wl,--as-needed -Wl,--sort-common -Wl,--gc-sections
         LNFLAGS += -Wl,--hash-style=gnu -Wl,--build-id=none
-        # Static linking on Linux
-        LNFLAGS += -static
+        # Note: Static linking disabled for compatibility
     endif
 else ifeq ($(COMPILER),clang)
     # Clang-specific optimizations
@@ -127,11 +126,7 @@ $(BIN_DIR):
 # Ensure MiniSat library is available; build it when missing
 $(MINISAT_LIB):
 	@echo "Building MiniSat (target: $(MINISAT_TARGET))..."
-ifeq ($(COMPILER),gcc)
-	@cd minisat && $(MAKE) CXX=$(CXX) COPTIMIZE="-O3 -flto=auto -fno-strict-aliasing -DNDEBUG" $(MINISAT_TARGET)
-else
-	@cd minisat && $(MAKE) CXX=$(CXX) $(MINISAT_TARGET)
-endif
+	@cd minisat && $(MAKE) CXX=$(CXX) COPTIMIZE="-O3 -fno-strict-aliasing -DNDEBUG" $(MINISAT_TARGET)
 
 # Main program target (only links main objects)
 $(BIN_DIR)/$(PROGRAM_NAME): $(MAIN_OBJS) $(MINISAT_LIB) | $(BIN_DIR)

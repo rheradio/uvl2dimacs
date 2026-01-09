@@ -48,6 +48,12 @@
 using namespace antlr4;
 using namespace antlr4::tree;
 
+// Program information constants
+namespace {
+    constexpr const char* PROGRAM_TITLE = "UVL2DIMACS: A UVL TRANSLATOR INTO BOOLEAN LOGIC, 2026";
+    constexpr const char* PROGRAM_AUTHORS = "Authors: Rubén Heradio and David Fernández Amorós";
+}
+
 /**
  * @class CustomErrorListener
  * @brief Custom error listener for handling parsing errors
@@ -78,47 +84,55 @@ public:
 };
 
 /**
+ * @brief Print ASCII banner and program information
+ * @param out Output stream to write to
+ */
+void print_banner(std::ostream& out) {
+    out << "###########################################################" << std::endl;
+    out << "             _   ____        _                             " << std::endl;
+    out << " _   ___   _| | |___ \\    __| (_)_ __ ___   __ _  ___ ___ " << std::endl;
+    out << "| | | \\ \\ / / |   __) |  / _` | | '_ ` _ \\ / _` |/ __/ __|" << std::endl;
+    out << "| |_| |\\ V /| |  / __/  | (_| | | | | | | | (_| | (__\\__ \\" << std::endl;
+    out << " \\__,_| \\_/ |_| |_____|  \\__,_|_|_| |_| |_|\\__,_|\\___|___/" << std::endl;
+    out << "" << std::endl;
+    out << "                            @@@@@@@@@@@@        " << std::endl;
+    out << "                         @@@@@@@@@@@@@@@@@@     " << std::endl;
+    out << "                       @@@@@            @@@@@   " << std::endl;
+    out << "                      @@@@                @@@@  " << std::endl;
+    out << "                     @@@      @@@@@@@@@@   @@@@ " << std::endl;
+    out << "                    @@@       @@@@@@@@@@    @@@@" << std::endl;
+    out << "                  @@@@@@@@        @@@@@@     @@@" << std::endl;
+    out << "              @@@@@@@@@@@@@@@@  @@@@@@@@     @@@" << std::endl;
+    out << "            @@@@@@         @@@@@@@@  @@@     @@@" << std::endl;
+    out << "          @@@@@             @@@@@@   @@@     @@@" << std::endl;
+    out << "         @@@@              @@@@@@@@         @@@@" << std::endl;
+    out << "        @@@@             @@@@   @@@@       @@@@ " << std::endl;
+    out << "        @@@            @@@@@     @@@     @@@@@  " << std::endl;
+    out << "        @@@          @@@@@       @@@  @@@@@@    " << std::endl;
+    out << "        @@@         @@@@         @@@@@@@@@      " << std::endl;
+    out << "        @@@                      @@@@@          " << std::endl;
+    out << "        @@@@                     @@@            " << std::endl;
+    out << "         @@@@                   @@@@            " << std::endl;
+    out << "          @@@@                @@@@              " << std::endl;
+    out << "           @@@@@            @@@@@               " << std::endl;
+    out << "             @@@@@@@@@@@@@@@@@@                 " << std::endl;
+    out << "                @@@@@@@@@@@@                    " << std::endl;
+    out << "" << std::endl;
+    out << "" << std::endl;
+    out << "  " << PROGRAM_TITLE << std::endl;
+    out << "    " << PROGRAM_AUTHORS << std::endl;
+    out << "    " << std::endl;
+    out << "###########################################################" << std::endl;
+    out << "" << std::endl;
+    out << "" << std::endl;
+}
+
+/**
  * @brief Print usage information
  * @param program_name Name of the program executable
  */
 void print_usage(const char* program_name) {
-    std::cerr << "###########################################################" << std::endl;
-    std::cerr << "             _   ____        _                             " << std::endl;
-    std::cerr << " _   ___   _| | |___ \\    __| (_)_ __ ___   __ _  ___ ___ " << std::endl;
-    std::cerr << "| | | \\ \\ / / |   __) |  / _` | | '_ ` _ \\ / _` |/ __/ __|" << std::endl;
-    std::cerr << "| |_| |\\ V /| |  / __/  | (_| | | | | | | | (_| | (__\\__ \\" << std::endl;
-    std::cerr << " \\__,_| \\_/ |_| |_____|  \\__,_|_|_| |_| |_|\\__,_|\\___|___/" << std::endl;
-    std::cerr << "" << std::endl;
-    std::cerr << "                            @@@@@@@@@@@@        " << std::endl;
-    std::cerr << "                         @@@@@@@@@@@@@@@@@@     " << std::endl;
-    std::cerr << "                       @@@@@            @@@@@   " << std::endl;
-    std::cerr << "                      @@@@                @@@@  " << std::endl;
-    std::cerr << "                     @@@      @@@@@@@@@@   @@@@ " << std::endl;
-    std::cerr << "                    @@@       @@@@@@@@@@    @@@@" << std::endl;
-    std::cerr << "                  @@@@@@@@        @@@@@@     @@@" << std::endl;
-    std::cerr << "              @@@@@@@@@@@@@@@@  @@@@@@@@     @@@" << std::endl;
-    std::cerr << "            @@@@@@         @@@@@@@@  @@@     @@@" << std::endl;
-    std::cerr << "          @@@@@             @@@@@@   @@@     @@@" << std::endl;
-    std::cerr << "         @@@@              @@@@@@@@         @@@@" << std::endl;
-    std::cerr << "        @@@@             @@@@   @@@@       @@@@ " << std::endl;
-    std::cerr << "        @@@            @@@@@     @@@     @@@@@  " << std::endl;
-    std::cerr << "        @@@          @@@@@       @@@  @@@@@@    " << std::endl;
-    std::cerr << "        @@@         @@@@         @@@@@@@@@      " << std::endl;
-    std::cerr << "        @@@                      @@@@@          " << std::endl;
-    std::cerr << "        @@@@                     @@@            " << std::endl;
-    std::cerr << "         @@@@                   @@@@            " << std::endl;
-    std::cerr << "          @@@@                @@@@              " << std::endl;
-    std::cerr << "           @@@@@            @@@@@               " << std::endl;
-    std::cerr << "             @@@@@@@@@@@@@@@@@@                 " << std::endl;
-    std::cerr << "                @@@@@@@@@@@@                    " << std::endl;
-    std::cerr << "" << std::endl;
-    std::cerr << "" << std::endl;
-    std::cerr << "  UVL2DIMACS: AN UVL TRANSLATOR INTO BOOLEAN LOGIC, 2026" << std::endl;
-    std::cerr << "    Authors: Rubén Heradio and David Fernández Amorós" << std::endl;
-    std::cerr << "    " << std::endl;
-    std::cerr << "###########################################################" << std::endl;
-    std::cerr << "" << std::endl;
-    std::cerr << "" << std::endl;
+    print_banner(std::cerr);
     std::cerr << "Usage: " << program_name << " [-t|-s] [-b] <input.uvl> <output.dimacs>" << std::endl;
     std::cerr << std::endl;
     std::cerr << "Description:" << std::endl;
@@ -138,28 +152,40 @@ void print_usage(const char* program_name) {
     std::cerr << "  This version is compiled with -O3 optimization for maximum speed." << std::endl;
 }
 
-int main(int argc, char* argv[]) {
-    // Parse arguments
-    CNFMode mode = CNFMode::STRAIGHTFORWARD; // Default mode
-    bool verbose = true;  // Default to showing progress
-    bool use_backbone = false;  // Backbone simplification flag
+/**
+ * @brief Structure to hold command-line arguments
+ */
+struct CommandLineArgs {
+    CNFMode mode = CNFMode::STRAIGHTFORWARD;
+    bool verbose = true;
+    bool use_backbone = false;
     std::string input_file;
     std::string output_file;
+};
+
+/**
+ * @brief Parse command-line arguments
+ * @param argc Argument count
+ * @param argv Argument values
+ * @return Parsed arguments or throws on error
+ */
+CommandLineArgs parse_arguments(int argc, char* argv[]) {
+    CommandLineArgs args;
 
     // Parse flags
     int arg_index = 1;
     while (arg_index < argc && argv[arg_index][0] == '-') {
         std::string flag = argv[arg_index];
         if (flag == "-t") {
-            mode = CNFMode::TSEITIN;
+            args.mode = CNFMode::TSEITIN;
         } else if (flag == "-s") {
-            mode = CNFMode::STRAIGHTFORWARD;
+            args.mode = CNFMode::STRAIGHTFORWARD;
         } else if (flag == "-b") {
-            use_backbone = true;
+            args.use_backbone = true;
         } else {
             std::cerr << "Error: Unknown flag '" << flag << "'" << std::endl;
             print_usage(argv[0]);
-            return 1;
+            exit(1);
         }
         arg_index++;
     }
@@ -167,181 +193,172 @@ int main(int argc, char* argv[]) {
     // Check argument count
     if (argc - arg_index != 2) {
         print_usage(argv[0]);
-        return 1;
+        exit(1);
     }
 
-    input_file = argv[arg_index];
-    output_file = argv[arg_index + 1];
+    args.input_file = argv[arg_index];
+    args.output_file = argv[arg_index + 1];
+
+    return args;
+}
+
+/**
+ * @brief Parse UVL file and build feature model
+ * @param input_file Path to input UVL file
+ * @param verbose Whether to print progress
+ * @return Feature model
+ */
+std::shared_ptr<FeatureModel> parse_uvl_file(const std::string& input_file, bool verbose) {
+    if (verbose) std::cout << "[1/5] Reading UVL file..." << std::endl;
+
+    std::ifstream stream(input_file);
+    if (!stream.is_open()) {
+        throw std::runtime_error("Could not open file: " + input_file);
+    }
+
+    // Create ANTLR input stream and lexer
+    ANTLRInputStream input(stream);
+    UVLCppLexer lexer(&input);
+
+    // Add custom error listener
+    CustomErrorListener errorListener;
+    lexer.removeErrorListeners();
+    lexer.addErrorListener(&errorListener);
+
+    // Create token stream and parser
+    CommonTokenStream tokens(&lexer);
+    UVLCppParser parser(&tokens);
+    parser.removeErrorListeners();
+    parser.addErrorListener(&errorListener);
+
+    // Parse the feature model
+    if (verbose) std::cout << "[2/5] Parsing UVL syntax..." << std::endl;
+    ParseTree* tree = parser.featureModel();
+
+    // Build FeatureModel from parse tree
+    if (verbose) std::cout << "[3/5] Building feature model..." << std::endl;
+    FeatureModelBuilder builder;
+    ParseTreeWalker::DEFAULT.walk(&builder, tree);
+
+    auto feature_model = builder.get_feature_model();
+    if (!feature_model) {
+        throw std::runtime_error("Failed to build feature model");
+    }
+
+    if (verbose) {
+        std::cout << "  Features:    " << feature_model->get_features().size() << std::endl;
+        std::cout << "  Relations:   " << feature_model->get_relations().size() << std::endl;
+        std::cout << "  Constraints: " << feature_model->get_constraints().size() << std::endl;
+    }
+
+    return feature_model;
+}
+
+/**
+ * @brief Apply backbone simplification to DIMACS file
+ * @param output_file Path to DIMACS file
+ * @param verbose Whether to print progress
+ * @return True if successful
+ */
+bool apply_backbone_simplification(const std::string& output_file, bool verbose) {
+    if (verbose) std::cout << "[6/6] Applying backbone simplification..." << std::endl;
+
+    // Find backbone_solver executable
+    std::string backbone_solver_path;
+
+    // Check in project directory first
+    char exe_path[1024];
+    ssize_t len = readlink("/proc/self/exe", exe_path, sizeof(exe_path) - 1);
+    if (len != -1) {
+        exe_path[len] = '\0';
+        std::string exe_dir = std::string(exe_path);
+        size_t last_slash = exe_dir.find_last_of("/\\");
+        if (last_slash != std::string::npos) {
+            exe_dir = exe_dir.substr(0, last_slash);
+        }
+        backbone_solver_path = exe_dir + "/../backbone_solver/bin/backbone_solver";
+    }
+
+    // Check if backbone_solver exists
+    if (access(backbone_solver_path.c_str(), X_OK) != 0) {
+        // Try PATH
+        backbone_solver_path = "backbone_solver";
+    }
+
+    // Create temporary file for simplified output
+    std::string temp_output = output_file + ".simplified";
+
+    // Apply backbone simplification
+    uvl2dimacs::BackboneSimplifier simplifier;
+    if (simplifier.simplify(output_file, temp_output, backbone_solver_path, verbose)) {
+        // Replace original file with simplified version
+        if (std::rename(temp_output.c_str(), output_file.c_str()) != 0) {
+            std::cerr << "Warning: Failed to replace original file with simplified version" << std::endl;
+            return false;
+        }
+
+        if (verbose) {
+            std::cout << "  Backbone size: " << simplifier.get_backbone_size() << std::endl;
+            std::cout << "  Removed clauses: " << simplifier.get_removed_clauses() << std::endl;
+            std::cout << "  Shortened clauses: " << simplifier.get_shortened_clauses() << std::endl;
+        }
+        return true;
+    } else {
+        std::cerr << "Warning: Backbone simplification failed, keeping original output" << std::endl;
+        std::remove(temp_output.c_str());
+        return false;
+    }
+}
+
+int main(int argc, char* argv[]) {
+    // Parse command-line arguments
+    CommandLineArgs args = parse_arguments(argc, argv);
 
     // Start timer
     auto start_time = std::chrono::high_resolution_clock::now();
 
     try {
-        if (verbose) {
-            std::cout << "###########################################################" << std::endl;
-            std::cout << "              _   ____        _ _                          " << std::endl;
-            std::cout << " _   ___   _| | |___ \\    __| (_)_ __ ___   __ _  ___ ___ " << std::endl;
-            std::cout << "| | | \\ \\ / / |   __) |  / _` | | '_ ` _ \\ / _` |/ __/ __|" << std::endl;
-            std::cout << "| |_| |\\ V /| |  / __/  | (_| | | | | | | | (_| | (__\\__ \\" << std::endl;
-            std::cout << " \\__,_| \\_/ |_| |_____|  \\__,_|_|_| |_| |_|\\__,_|\\___|___/" << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "                            @@@@@@@@@@@@        " << std::endl;
-            std::cout << "                         @@@@@@@@@@@@@@@@@@     " << std::endl;
-            std::cout << "                       @@@@@            @@@@@   " << std::endl;
-            std::cout << "                      @@@@                @@@@  " << std::endl;
-            std::cout << "                     @@@      @@@@@@@@@@   @@@@ " << std::endl;
-            std::cout << "                    @@@       @@@@@@@@@@    @@@@" << std::endl;
-            std::cout << "                  @@@@@@@@        @@@@@@     @@@" << std::endl;
-            std::cout << "              @@@@@@@@@@@@@@@@  @@@@@@@@     @@@" << std::endl;
-            std::cout << "            @@@@@@         @@@@@@@@  @@@     @@@" << std::endl;
-            std::cout << "          @@@@@             @@@@@@   @@@     @@@" << std::endl;
-            std::cout << "         @@@@              @@@@@@@@         @@@@" << std::endl;
-            std::cout << "        @@@@             @@@@   @@@@       @@@@ " << std::endl;
-            std::cout << "        @@@            @@@@@     @@@     @@@@@  " << std::endl;
-            std::cout << "        @@@          @@@@@       @@@  @@@@@@    " << std::endl;
-            std::cout << "        @@@         @@@@         @@@@@@@@@      " << std::endl;
-            std::cout << "        @@@                      @@@@@          " << std::endl;
-            std::cout << "        @@@@                     @@@            " << std::endl;
-            std::cout << "         @@@@                   @@@@            " << std::endl;
-            std::cout << "          @@@@                @@@@              " << std::endl;
-            std::cout << "           @@@@@            @@@@@               " << std::endl;
-            std::cout << "             @@@@@@@@@@@@@@@@@@                 " << std::endl;
-            std::cout << "                @@@@@@@@@@@@                    " << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "  UVL2DIMACS: A UVL TRANSLATOR INTO BOOLEAN LOGIC, 2026" << std::endl;
-            std::cout << "    Authors: Rubén Heradio and David Fernández Amorós" << std::endl;
-            std::cout << "    " << std::endl;
-            std::cout << "###########################################################" << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "CNF Mode: " << (mode == CNFMode::TSEITIN ? "Tseitin (with auxiliary variables)" : "Straightforward (no auxiliary variables)") << std::endl;
-            std::cout << "Input:  " << input_file << std::endl;
-            std::cout << "Output: " << output_file << std::endl;
+        // Print banner and configuration
+        if (args.verbose) {
+            print_banner(std::cout);
+            std::cout << "CNF Mode: " << (args.mode == CNFMode::TSEITIN ?
+                "Tseitin (with auxiliary variables)" : "Straightforward (no auxiliary variables)") << std::endl;
+            std::cout << "Input:  " << args.input_file << std::endl;
+            std::cout << "Output: " << args.output_file << std::endl;
             std::cout << std::endl;
         }
 
-        // Open the UVL file
-        if (verbose) std::cout << "[1/5] Reading UVL file..." << std::endl;
-        std::ifstream stream(input_file);
-        if (!stream.is_open()) {
-            std::cerr << "Error: Could not open file: " << input_file << std::endl;
-            return 1;
-        }
-
-        // Create ANTLR input stream
-        ANTLRInputStream input(stream);
-
-        // Create lexer
-        UVLCppLexer lexer(&input);
-
-        // Add custom error listener to lexer
-        CustomErrorListener errorListener;
-        lexer.removeErrorListeners();
-        lexer.addErrorListener(&errorListener);
-
-        // Create token stream
-        CommonTokenStream tokens(&lexer);
-
-        // Create parser
-        UVLCppParser parser(&tokens);
-
-        // Add custom error listener to parser
-        parser.removeErrorListeners();
-        parser.addErrorListener(&errorListener);
-
-        // Parse the feature model
-        if (verbose) std::cout << "[2/5] Parsing UVL syntax..." << std::endl;
-        ParseTree* tree = parser.featureModel();
-
-        // Build FeatureModel from parse tree
-        if (verbose) std::cout << "[3/5] Building feature model..." << std::endl;
-        FeatureModelBuilder builder;
-        ParseTreeWalker::DEFAULT.walk(&builder, tree);
-
-        auto feature_model = builder.get_feature_model();
-        if (!feature_model) {
-            std::cerr << "Error: Failed to build feature model" << std::endl;
-            return 1;
-        }
-
-        if (verbose) {
-            std::cout << "  Features:    " << feature_model->get_features().size() << std::endl;
-            std::cout << "  Relations:   " << feature_model->get_relations().size() << std::endl;
-            std::cout << "  Constraints: " << feature_model->get_constraints().size() << std::endl;
-        }
+        // Parse UVL file and build feature model
+        auto feature_model = parse_uvl_file(args.input_file, args.verbose);
 
         // Transform to CNF
-        if (verbose) std::cout << "[4/5] Transforming to CNF..." << std::endl;
+        if (args.verbose) std::cout << "[4/5] Transforming to CNF..." << std::endl;
         FMToCNF transformer(feature_model);
-        CNFModel cnf_model = transformer.transform(mode);
+        CNFModel cnf_model = transformer.transform(args.mode);
 
-        if (verbose) {
+        if (args.verbose) {
             std::cout << "  Variables:   " << cnf_model.get_num_variables() << std::endl;
             std::cout << "  Clauses:     " << cnf_model.get_num_clauses() << std::endl;
         }
 
         // Write DIMACS file
-        if (verbose) std::cout << "[5/5] Writing DIMACS file..." << std::endl;
+        if (args.verbose) std::cout << "[5/5] Writing DIMACS file..." << std::endl;
         DimacsWriter writer(cnf_model);
-        writer.write_to_file(output_file);
+        writer.write_to_file(args.output_file);
 
         // Apply backbone simplification if requested
-        if (use_backbone) {
-            if (verbose) std::cout << "[6/6] Applying backbone simplification..." << std::endl;
-
-            // Find backbone_solver executable
-            std::string backbone_solver_path;
-
-            // Check in project directory first
-            char exe_path[1024];
-            ssize_t len = readlink("/proc/self/exe", exe_path, sizeof(exe_path) - 1);
-            if (len != -1) {
-                exe_path[len] = '\0';
-                std::string exe_dir = std::string(exe_path);
-                size_t last_slash = exe_dir.find_last_of("/\\");
-                if (last_slash != std::string::npos) {
-                    exe_dir = exe_dir.substr(0, last_slash);
-                }
-                backbone_solver_path = exe_dir + "/../backbone_solver/bin/backbone_solver";
-            }
-
-            // Check if backbone_solver exists
-            if (access(backbone_solver_path.c_str(), X_OK) != 0) {
-                // Try PATH
-                backbone_solver_path = "backbone_solver";
-            }
-
-            // Create temporary file for simplified output
-            std::string temp_output = output_file + ".simplified";
-
-            // Apply backbone simplification
-            uvl2dimacs::BackboneSimplifier simplifier;
-            if (simplifier.simplify(output_file, temp_output, backbone_solver_path, verbose)) {
-                // Replace original file with simplified version
-                if (std::rename(temp_output.c_str(), output_file.c_str()) != 0) {
-                    std::cerr << "Warning: Failed to replace original file with simplified version" << std::endl;
-                } else if (verbose) {
-                    std::cout << "  Backbone size: " << simplifier.get_backbone_size() << std::endl;
-                    std::cout << "  Removed clauses: " << simplifier.get_removed_clauses() << std::endl;
-                    std::cout << "  Shortened clauses: " << simplifier.get_shortened_clauses() << std::endl;
-                }
-            } else {
-                std::cerr << "Warning: Backbone simplification failed, keeping original output" << std::endl;
-                std::remove(temp_output.c_str());
-            }
+        if (args.use_backbone) {
+            apply_backbone_simplification(args.output_file, args.verbose);
         }
 
         // Calculate elapsed time
         auto end_time = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-        if (true) {
-            std::cout << std::endl;
-            std::cout << "Success! DIMACS file created." << std::endl;
-            if (verbose) {
-                std::cout << "Time elapsed: " << duration.count() << " ms" << std::endl;
-            }
+        std::cout << std::endl;
+        std::cout << "Success! DIMACS file created." << std::endl;
+        if (args.verbose) {
+            std::cout << "Time elapsed: " << duration.count() << " ms" << std::endl;
         }
 
         return 0;
