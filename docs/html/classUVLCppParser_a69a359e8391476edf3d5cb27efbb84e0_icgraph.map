@@ -1,0 +1,48 @@
+<map id="reference" name="reference">
+<area shape="rect" id="Node000001" title=" " alt="" coords="869,209,953,234"/>
+<area shape="rect" id="Node000002" href="$classUVLCppParser.html#ae4cf089e805726bb5e2ef881028966f5" title=" " alt="" coords="639,61,807,86"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="896,197,866,147,845,121,820,100,798,88,800,84,823,95,849,117,871,144,901,195"/>
+<area shape="rect" id="Node000004" href="$classUVLCppParser.html#ae3af2259bff9d3e79599a48f2f5b45f7" title=" " alt="" coords="241,85,385,110"/>
+<area shape="poly" id="edge22_Node000001_Node000004" title=" " alt="" coords="903,195,893,160,877,120,853,80,838,64,820,50,789,34,757,23,690,10,620,10,551,18,486,34,428,52,342,87,340,82,426,47,485,28,551,13,620,4,690,5,759,17,792,29,823,46,841,60,858,77,882,117,898,159,908,194"/>
+<area shape="rect" id="Node000006" href="$classUVLCppParser.html#a42985bc91d5784bb0ee6af59a9f094cb" title=" " alt="" coords="679,110,766,135"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="887,200,857,173,820,149,793,138,766,131,767,126,795,133,823,144,860,169,891,197"/>
+<area shape="rect" id="Node000007" href="$classUVLCppParser.html#a62ca054a08a6b169f9d4ed7e0c9e8f28" title=" " alt="" coords="688,307,757,333"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="891,246,860,273,823,298,790,311,758,318,757,313,789,306,820,294,857,269,887,242"/>
+<area shape="rect" id="Node000015" href="$classUVLCppParser.html#a400b613b75064a920e53e734b06d396e" title=" " alt="" coords="677,357,769,382"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="901,248,871,299,849,325,823,348,797,360,770,368,768,362,795,355,820,343,845,321,866,296,896,245"/>
+<area shape="rect" id="Node000017" href="$classUVLCppParser.html#a530069c1bd70e35268c08fef9285822d" title=" " alt="" coords="453,407,557,433"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="908,248,898,283,881,324,857,364,823,397,791,414,756,427,684,439,615,439,556,433,557,427,615,434,684,434,755,422,789,409,820,392,853,361,877,322,893,281,902,247"/>
+<area shape="rect" id="Node000018" href="$classUVLCppParser.html#afbf510033485d2e46e89c38ea3beb6ca" title=" " alt="" coords="624,159,821,185"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="855,208,821,199,776,187,778,182,822,193,857,203"/>
+<area shape="rect" id="Node000019" href="$classUVLCppParser.html#a71667435da04f60ff5eb2a2a6a907dc9" title=" " alt="" coords="632,209,813,234"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="855,224,814,224,814,219,855,219"/>
+<area shape="rect" id="Node000020" href="$classUVLCppParser.html#a4d054900bc5f426a935d54d0cdc8aed0" title=" " alt="" coords="637,258,809,283"/>
+<area shape="poly" id="edge25_Node000001_Node000020" title=" " alt="" coords="857,239,822,248,774,260,773,255,821,243,855,233"/>
+<area shape="rect" id="Node000003" href="$classUVLCppParser.html#a1cc3e2a49e5f29f358df56f1ce9d8a58" title=" " alt="" coords="433,158,576,183"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="645,93,625,100,568,130,524,160,521,156,566,125,623,95,643,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="457,155,347,113,349,108,459,150"/>
+<area shape="rect" id="Node000005" href="$classUVLCppParser.html#ac20f844dafe736e41521b3d61d096589" title=" " alt="" coords="8,85,191,110"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,100,191,100,191,95,228,95"/>
+<area shape="rect" id="Node000008" href="$classUVLCppParser.html#a99880ca4accccae44e69be6eaf545a19" title=" " alt="" coords="467,309,543,334"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="674,323,543,324,543,318,674,318"/>
+<area shape="rect" id="Node000013" href="$classUVLCppParser.html#a760ee36f038aa65ac45112c5686e87bf" title=" " alt="" coords="459,207,550,233"/>
+<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="674,316,648,309,623,298,607,288,597,277,588,266,575,254,538,235,541,230,577,250,592,262,601,273,611,284,625,294,650,304,675,311"/>
+<area shape="rect" id="Node000009" href="$classUVLCppParser.html#ae99c2a80f4cbfc99a5d005a1072f806b" title=" " alt="" coords="259,358,368,383"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="454,337,364,361,363,355,453,332"/>
+<area shape="rect" id="Node000010" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a72ec653c82203c79c6967992cdec6768" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,287,193,327"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="256,356,166,329,168,324,258,351"/>
+<area shape="rect" id="Node000011" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a88a92940148552b068f042783bdca534" title="Convert a UVL file to DIMACS string with specified mode." alt="" coords="5,351,193,391"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="245,373,193,373,193,368,245,368"/>
+<area shape="rect" id="Node000012" href="$uvl2dimacs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="72,415,127,441"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="253,389,128,423,126,418,251,384"/>
+<area shape="rect" id="Node000014" href="$classUVLCppParser.html#a510a6f0a352ff7a4cb1561477bf9ee18" title=" " alt="" coords="284,233,343,258"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="446,230,343,244,342,239,445,225"/>
+<area shape="poly" id="edge14_Node000014_Node000007" title=" " alt="" coords="357,250,688,311,687,316,356,256"/>
+<area shape="rect" id="Node000016" href="$classUVLCppParser.html#adcc909add05860d77f7ac3139de24b15" title=" " alt="" coords="469,358,541,383"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="662,372,541,373,541,368,662,367"/>
+<area shape="poly" id="edge17_Node000016_Node000009" title=" " alt="" coords="455,373,368,373,368,368,455,368"/>
+<area shape="poly" id="edge19_Node000017_Node000009" title=" " alt="" coords="441,406,363,386,364,381,442,401"/>
+<area shape="poly" id="edge21_Node000018_Node000003" title=" " alt="" coords="610,174,576,174,576,168,610,169"/>
+<area shape="poly" id="edge24_Node000019_Node000003" title=" " alt="" coords="653,208,559,186,561,181,655,203"/>
+<area shape="poly" id="edge26_Node000020_Node000003" title=" " alt="" coords="638,255,623,248,607,235,598,222,589,209,575,197,552,186,555,181,577,192,593,206,602,219,611,231,625,243,641,251"/>
+</map>

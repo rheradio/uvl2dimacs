@@ -1,0 +1,15 @@
+<map id="get_auxiliary_variables" name="get_auxiliary_variables">
+<area shape="rect" id="Node000001" title="Gets the auxiliary variable descriptions." alt="" coords="676,45,851,70"/>
+<area shape="rect" id="Node000002" href="$classDimacsWriter.html#a054e39b8ee37b55a653eb673ae27a4a5" title="Writes the CNF model to an output stream in DIMACS format." alt="" coords="476,37,628,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="663,60,629,60,629,55,663,55"/>
+<area shape="rect" id="Node000003" href="$classDimacsWriter.html#adb97e4eb71db8f8df39687da38034697" title="Converts the CNF model to a DIMACS format string." alt="" coords="241,5,428,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,47,428,42,428,36,462,41"/>
+<area shape="rect" id="Node000005" href="$classDimacsWriter.html#af814f31f97070598092811603b6cd1aa" title="Writes the CNF model to a file in DIMACS format." alt="" coords="259,69,411,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="462,73,411,81,410,76,462,68"/>
+<area shape="rect" id="Node000004" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a88a92940148552b068f042783bdca534" title="Convert a UVL file to DIMACS string with specified mode." alt="" coords="5,5,193,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="227,28,194,28,194,23,227,23"/>
+<area shape="rect" id="Node000006" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a72ec653c82203c79c6967992cdec6768" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,69,193,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,92,193,92,193,87,245,87"/>
+<area shape="rect" id="Node000007" href="$uvl2dimacs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="72,134,127,159"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="246,114,127,143,126,138,244,109"/>
+</map>

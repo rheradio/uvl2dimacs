@@ -1,0 +1,124 @@
+<map id="convert" name="convert">
+<area shape="rect" id="Node000001" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,1043,76,1069"/>
+<area shape="rect" id="Node000002" href="$classUVLCppParser.html#ae99c2a80f4cbfc99a5d005a1072f806b" title=" " alt="" coords="135,555,343,581"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,1043,72,939,95,867,122,794,174,680,222,592,226,594,179,682,126,796,100,868,77,940,48,1044"/>
+<area shape="rect" id="Node000030" href="$classuvl2dimacs_1_1BackboneSimplifier.html#a5f7425c9724cd8203f04030eda853148" title=" " alt="" coords="124,807,355,847"/>
+<area shape="poly" id="edge64_Node000001_Node000030" title=" " alt="" coords="41,1043,47,1006,61,956,85,903,102,878,122,857,128,852,131,856,126,861,106,882,90,906,66,958,53,1008,46,1044"/>
+<area shape="rect" id="Node000031" href="$classFeatureModelBuilder.html#a04622b22f0380b95ac2ddc6cc9fe802c" title="Gets the constructed feature model." alt="" coords="161,871,318,911"/>
+<area shape="poly" id="edge65_Node000001_Node000031" title=" " alt="" coords="44,1042,72,987,94,955,122,927,146,913,149,917,126,932,98,959,76,990,49,1045"/>
+<area shape="rect" id="Node000032" href="$classCNFModel.html#a6a996ad83d35b9370de6c7a608971df7" title="Gets the total number of clauses." alt="" coords="631,935,841,961"/>
+<area shape="poly" id="edge66_Node000001_Node000032" title=" " alt="" coords="51,1041,81,1013,101,999,123,988,186,967,251,952,317,941,383,934,509,930,617,933,617,939,509,935,384,939,318,946,252,957,187,973,125,993,104,1004,85,1018,55,1045"/>
+<area shape="rect" id="Node000033" href="$classCNFModel.html#a26d88999e87506faaf8f49c8a456c0aa" title="Gets the total number of variables." alt="" coords="625,986,847,1011"/>
+<area shape="poly" id="edge67_Node000001_Node000033" title=" " alt="" coords="67,1041,123,1022,252,1001,383,991,506,988,612,989,612,995,506,993,384,996,253,1007,125,1027,69,1046"/>
+<area shape="rect" id="Node000034" href="$classuvl2dimacs_1_1BackboneSimplifier.html#a6cbaca2278b524ddca7a5f353186ef71" title=" " alt="" coords="124,1100,355,1140"/>
+<area shape="poly" id="edge68_Node000001_Node000034" title=" " alt="" coords="73,1066,125,1086,150,1094,148,1099,123,1091,72,1071"/>
+<area shape="rect" id="Node000035" href="$classuvl2dimacs_1_1BackboneSimplifier.html#a868cbe265b6250c2d6f3d2d7d0b4f2b7" title=" " alt="" coords="124,1164,355,1204"/>
+<area shape="poly" id="edge69_Node000001_Node000035" title=" " alt="" coords="52,1067,81,1108,101,1131,125,1150,136,1156,133,1161,123,1154,98,1135,76,1112,47,1070"/>
+<area shape="rect" id="Node000036" href="$classuvl2dimacs_1_1BackboneSimplifier.html#a3a2e325f4f7713fb0bf36f0b2771f846" title="Simplify a DIMACS file using its backbone." alt="" coords="124,1228,355,1268"/>
+<area shape="poly" id="edge70_Node000001_Node000036" title=" " alt="" coords="47,1068,56,1099,71,1138,94,1179,126,1214,132,1219,129,1223,122,1218,90,1182,67,1140,51,1100,42,1070"/>
+<area shape="rect" id="Node000037" href="$namespaceuvl2dimacs.html#aff6907bbeb3a88c0e232dbddcb4ad1ce" title="Convert ConversionMode to CNFMode." alt="" coords="145,1293,334,1318"/>
+<area shape="poly" id="edge71_Node000001_Node000037" title=" " alt="" coords="45,1069,50,1110,62,1167,86,1227,104,1255,126,1278,134,1284,131,1289,122,1282,100,1258,82,1230,57,1168,45,1111,40,1069"/>
+<area shape="rect" id="Node000038" href="$classFMToCNF.html#a78ffc2137bfb912e4461459d5ac7e334" title="Transforms the feature model to CNF." alt="" coords="162,1342,317,1367"/>
+<area shape="poly" id="edge72_Node000001_Node000038" title=" " alt="" coords="44,1069,46,1118,55,1188,66,1227,80,1264,100,1299,126,1329,151,1344,148,1349,122,1333,96,1302,75,1266,60,1228,50,1189,40,1118,39,1069"/>
+<area shape="rect" id="Node000039" href="$classDimacsWriter.html#af814f31f97070598092811603b6cd1aa" title="Writes the CNF model to a file in DIMACS format." alt="" coords="163,1036,315,1076"/>
+<area shape="poly" id="edge73_Node000001_Node000039" title=" " alt="" coords="76,1053,150,1053,150,1059,76,1059"/>
+<area shape="rect" id="Node000003" href="$classUVLCppParser.html#a3f2ff4fc50710e904bea6084e9e66dec" title=" " alt="" coords="906,885,1099,910"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,580,326,736,373,820,391,849,404,863,441,879,492,891,553,899,621,903,763,905,892,901,892,907,763,911,620,909,552,904,491,896,439,884,401,868,387,852,368,823,322,738,244,582"/>
+<area shape="rect" id="Node000006" href="$classUVLCppParser.html#a3898fbe1f42f22008d2658973c4581d6" title=" " alt="" coords="1445,479,1608,505"/>
+<area shape="poly" id="edge63_Node000002_Node000006" title=" " alt="" coords="277,578,499,651,657,697,830,742,1004,778,1087,790,1165,798,1237,801,1300,797,1354,786,1396,767,1426,743,1451,713,1472,679,1488,643,1509,574,1520,518,1525,519,1515,575,1493,645,1476,682,1455,716,1430,747,1399,772,1355,791,1301,802,1237,806,1165,804,1086,796,1003,783,829,747,656,703,497,656,276,583"/>
+<area shape="rect" id="Node000015" href="$classUVLCppParser.html#a99880ca4accccae44e69be6eaf545a19" title=" " alt="" coords="403,555,577,581"/>
+<area shape="poly" id="edge28_Node000002_Node000015" title=" " alt="" coords="344,565,389,565,389,571,344,571"/>
+<area shape="rect" id="Node000022" href="$classUVLCppParser.html#adcc909add05860d77f7ac3139de24b15" title=" " alt="" coords="651,175,821,201"/>
+<area shape="poly" id="edge45_Node000002_Node000022" title=" " alt="" coords="251,553,314,491,401,414,483,351,567,293,701,206,704,210,570,297,487,356,404,418,317,495,255,557"/>
+<area shape="rect" id="Node000024" href="$classUVLCppParser.html#a88fe29047c8cfb00f4c720fcafb344e7" title=" " alt="" coords="403,429,577,454"/>
+<area shape="poly" id="edge50_Node000002_Node000024" title=" " alt="" coords="265,553,451,458,453,463,267,558"/>
+<area shape="rect" id="Node000029" href="$classUVLCppParser.html#a530069c1bd70e35268c08fef9285822d" title=" " alt="" coords="901,25,1104,50"/>
+<area shape="poly" id="edge60_Node000002_Node000029" title=" " alt="" coords="246,554,304,458,349,395,401,334,462,273,517,225,569,186,622,155,678,130,740,107,894,59,924,51,925,56,895,64,742,112,680,135,625,160,572,191,520,229,465,277,405,338,354,398,309,461,250,556"/>
+<area shape="rect" id="Node000004" href="$classUVLCppParser.html#a0c0aca2f467f3fdbf79944ee7e962630" title=" " alt="" coords="1171,935,1385,961"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1073,908,1195,930,1194,936,1072,913"/>
+<area shape="poly" id="edge27_Node000003_Node000006" title=" " alt="" coords="1099,899,1171,895,1249,881,1289,870,1327,855,1363,836,1396,813,1427,780,1453,743,1474,702,1490,660,1511,579,1520,518,1526,519,1516,580,1495,661,1479,704,1458,745,1431,784,1399,817,1366,841,1329,860,1290,875,1251,887,1171,900,1100,904"/>
+<area shape="rect" id="Node000005" href="$classUVLCppParser.html#ab9c0eb0223d5e0dced81dcc040a3b246" title=" " alt="" coords="2839,658,3025,683"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1385,936,1549,925,1733,920,2427,920,2503,913,2578,893,2650,864,2717,829,2778,790,2830,753,2905,691,2909,695,2834,757,2781,795,2720,833,2652,869,2580,898,2504,918,2427,925,1733,925,1549,931,1385,942"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="1366,933,1396,914,1434,869,1463,816,1486,760,1502,703,1512,647,1519,596,1523,519,1528,519,1524,597,1518,648,1507,704,1491,762,1468,818,1438,872,1399,918,1369,938"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="2892,660,2884,650,2888,640,2905,634,2932,631,2967,635,2977,640,2980,646,2976,649,2973,644,2965,641,2932,637,2906,639,2892,644,2889,649,2896,656"/>
+<area shape="poly" id="edge26_Node000006_Node000006" title=" " alt="" coords="1493,481,1485,471,1489,461,1503,455,1527,453,1556,457,1567,466,1564,470,1554,461,1527,458,1505,460,1493,465,1490,470,1497,478"/>
+<area shape="rect" id="Node000007" href="$classUVLCppParser.html#ae91b421bc8a295b6e7eaad698e5aab92" title=" " alt="" coords="1656,505,1813,530"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1571,502,1643,513,1642,518,1570,508"/>
+<area shape="poly" id="edge25_Node000007_Node000006" title=" " alt="" coords="1690,507,1621,497,1622,492,1691,502"/>
+<area shape="rect" id="Node000008" href="$classUVLCppParser.html#a1acd3ae8059af172b54ac9bd6b44ee53" title=" " alt="" coords="1861,555,2045,581"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1791,528,1885,550,1884,555,1790,533"/>
+<area shape="poly" id="edge24_Node000008_Node000006" title=" " alt="" coords="1861,569,1761,562,1655,544,1608,530,1566,513,1568,508,1610,525,1657,539,1762,556,1861,564"/>
+<area shape="rect" id="Node000009" href="$classUVLCppParser.html#a8a871233dca4f1f47286c3e337760afd" title=" " alt="" coords="2093,555,2271,581"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="2046,565,2080,565,2080,571,2046,571"/>
+<area shape="poly" id="edge23_Node000009_Node000006" title=" " alt="" coords="2134,558,1991,524,1903,507,1813,495,1714,489,1622,490,1622,485,1715,484,1814,490,1903,502,1992,519,2135,553"/>
+<area shape="rect" id="Node000010" href="$classUVLCppParser.html#a6f219f8ada5671abfdaa0cf4a2c43784" title=" " alt="" coords="2333,595,2519,635"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="2250,578,2320,592,2319,597,2249,584"/>
+<area shape="rect" id="Node000012" href="$classUVLCppParser.html#a88ff205c158c8a1ad2a1023b3e3ee8ad" title=" " alt="" coords="2319,454,2533,479"/>
+<area shape="poly" id="edge16_Node000009_Node000012" title=" " alt="" coords="2219,553,2270,534,2384,483,2386,488,2272,539,2221,558"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="2520,618,2648,627,2791,643,2855,653,2854,658,2790,648,2648,633,2519,623"/>
+<area shape="poly" id="edge15_Node000010_Node000006" title=" " alt="" coords="2332,627,2197,635,2026,634,1933,628,1839,616,1745,598,1655,572,1599,546,1553,515,1556,511,1602,541,1657,567,1747,592,1840,611,1934,622,2026,629,2197,630,2332,622"/>
+<area shape="rect" id="Node000011" href="$classUVLCppParser.html#ae6ffbb3f6a4c8cf8d8631d6d1f426085" title=" " alt="" coords="2581,658,2791,683"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="2520,632,2614,653,2612,658,2519,637"/>
+<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="2791,668,2825,668,2825,673,2791,673"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="2581,674,2183,675,1952,675,1866,674,1798,669,1733,651,1655,616,1621,594,1590,568,1544,517,1548,514,1594,564,1624,590,1657,611,1735,646,1799,663,1866,669,1952,669,2183,669,2581,669"/>
+<area shape="poly" id="edge22_Node000012_Node000006" title=" " alt="" coords="2318,465,2020,459,1838,463,1656,473,1606,480,1605,475,1656,468,1838,457,2020,454,2318,459"/>
+<area shape="poly" id="edge21_Node000012_Node000007" title=" " alt="" coords="2319,477,1827,513,1827,508,2318,472"/>
+<area shape="rect" id="Node000013" href="$classUVLCppParser.html#a0f36e81539769da205755ea6f67f8a23" title=" " alt="" coords="2614,353,2758,378"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="2459,452,2638,381,2640,386,2461,456"/>
+<area shape="poly" id="edge20_Node000013_Node000006" title=" " alt="" coords="2614,368,2183,368,1952,368,1896,371,1840,380,1731,409,1636,444,1566,476,1564,471,1634,439,1729,404,1838,375,1895,366,1952,363,2183,363,2614,363"/>
+<area shape="rect" id="Node000014" href="$classUVLCppParser.html#a868c2012cd9c4be17c4090be89553877" title=" " alt="" coords="2865,302,2999,327"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="2748,350,2856,328,2857,333,2749,355"/>
+<area shape="poly" id="edge19_Node000014_Node000006" title=" " alt="" coords="2865,317,2427,317,1952,317,1866,321,1799,333,1736,356,1657,393,1598,431,1552,472,1549,468,1595,427,1655,388,1733,351,1798,328,1865,316,1952,312,2427,312,2865,312"/>
+<area shape="poly" id="edge44_Node000015_Node000006" title=" " alt="" coords="577,553,725,534,894,516,1188,499,1432,491,1432,496,1188,504,895,521,726,539,578,558"/>
+<area shape="rect" id="Node000016" href="$classUVLCppParser.html#a62ca054a08a6b169f9d4ed7e0c9e8f28" title=" " alt="" coords="652,606,820,631"/>
+<area shape="poly" id="edge29_Node000015_Node000016" title=" " alt="" coords="553,578,661,601,660,606,552,584"/>
+<area shape="poly" id="edge43_Node000016_Node000006" title=" " alt="" coords="800,629,939,654,1114,677,1201,684,1280,686,1347,680,1396,666,1418,652,1438,635,1471,595,1496,553,1513,517,1518,519,1501,555,1476,598,1442,639,1421,656,1398,671,1348,685,1281,691,1200,690,1113,683,938,659,799,634"/>
+<area shape="poly" id="edge30_Node000016_Node000008" title=" " alt="" coords="749,630,773,657,806,691,848,725,896,751,968,777,1030,794,1087,803,1141,805,1196,801,1255,792,1397,767,1474,751,1551,729,1698,678,1824,626,1913,585,1916,589,1826,631,1700,683,1552,734,1475,756,1398,772,1255,798,1196,806,1141,810,1086,808,1029,799,966,782,894,756,845,729,803,695,769,661,745,634"/>
+<area shape="rect" id="Node000017" href="$classUVLCppParser.html#aa71155f4a66d1cd1bcd86c10cd828606" title=" " alt="" coords="1159,733,1397,758"/>
+<area shape="poly" id="edge31_Node000016_Node000017" title=" " alt="" coords="755,630,814,671,854,694,896,711,958,727,1022,738,1145,746,1145,752,1022,743,957,732,894,716,851,698,811,676,752,634"/>
+<area shape="rect" id="Node000018" href="$classUVLCppParser.html#af4f805cda01d70ace2537db785eef3e8" title=" " alt="" coords="903,531,1102,557"/>
+<area shape="poly" id="edge33_Node000016_Node000018" title=" " alt="" coords="773,603,894,566,926,557,928,563,895,571,775,609"/>
+<area shape="rect" id="Node000019" href="$classUVLCppParser.html#a510a6f0a352ff7a4cb1561477bf9ee18" title=" " alt="" coords="923,581,1082,606"/>
+<area shape="poly" id="edge35_Node000016_Node000019" title=" " alt="" coords="820,608,909,600,910,605,820,614"/>
+<area shape="rect" id="Node000021" href="$classUVLCppParser.html#a69a359e8391476edf3d5cb27efbb84e0" title=" " alt="" coords="1187,74,1369,99"/>
+<area shape="poly" id="edge40_Node000016_Node000021" title=" " alt="" coords="739,605,756,553,788,477,833,392,861,351,893,313,932,275,976,240,1069,180,1157,134,1228,102,1231,107,1159,139,1071,185,979,244,936,279,897,317,866,354,838,395,793,479,761,555,744,607"/>
+<area shape="poly" id="edge32_Node000017_Node000006" title=" " alt="" coords="1359,730,1396,711,1419,690,1440,666,1475,613,1499,560,1515,517,1520,519,1504,562,1479,615,1444,669,1423,694,1399,716,1361,735"/>
+<area shape="poly" id="edge34_Node000018_Node000006" title=" " alt="" coords="1102,535,1397,508,1431,504,1432,509,1398,513,1103,540"/>
+<area shape="poly" id="edge39_Node000019_Node000006" title=" " alt="" coords="1082,585,1229,568,1313,554,1397,536,1483,507,1484,513,1398,541,1314,559,1230,573,1082,590"/>
+<area shape="rect" id="Node000020" href="$classUVLCppParser.html#a760ee36f038aa65ac45112c5686e87bf" title=" " alt="" coords="1183,631,1373,657"/>
+<area shape="poly" id="edge36_Node000019_Node000020" title=" " alt="" coords="1073,604,1195,626,1194,632,1072,609"/>
+<area shape="poly" id="edge38_Node000020_Node000006" title=" " alt="" coords="1347,629,1396,610,1429,588,1458,563,1505,514,1508,518,1462,567,1432,592,1399,615,1349,634"/>
+<area shape="poly" id="edge37_Node000020_Node000016" title=" " alt="" coords="1183,642,834,626,834,621,1183,637"/>
+<area shape="poly" id="edge42_Node000021_Node000006" title=" " alt="" coords="1367,97,1399,117,1419,143,1439,182,1475,282,1503,386,1522,466,1517,467,1498,387,1469,283,1434,184,1415,146,1396,121,1364,102"/>
+<area shape="poly" id="edge41_Node000021_Node000014" title=" " alt="" coords="1325,97,1402,116,1503,137,1617,153,1733,160,2427,160,2497,164,2566,175,2635,192,2700,212,2814,256,2896,294,2894,298,2812,261,2698,217,2633,197,2565,181,2496,170,2427,165,1733,165,1617,159,1502,142,1401,121,1324,102"/>
+<area shape="poly" id="edge49_Node000022_Node000006" title=" " alt="" coords="821,179,964,172,1134,171,1216,176,1291,184,1353,198,1399,218,1429,243,1454,273,1475,307,1491,342,1513,411,1524,465,1519,466,1508,412,1486,344,1470,310,1450,276,1425,247,1396,222,1352,203,1290,189,1216,181,1133,177,965,178,822,184"/>
+<area shape="rect" id="Node000023" href="$classUVLCppParser.html#a400b613b75064a920e53e734b06d396e" title=" " alt="" coords="907,74,1098,99"/>
+<area shape="poly" id="edge46_Node000022_Node000023" title=" " alt="" coords="763,173,822,146,894,116,940,101,942,106,896,121,824,151,765,178"/>
+<area shape="poly" id="edge48_Node000023_Node000006" title=" " alt="" coords="1085,97,1273,131,1354,150,1399,167,1431,201,1458,239,1479,280,1495,323,1516,404,1526,466,1520,466,1511,405,1490,325,1474,283,1453,242,1427,204,1396,172,1353,155,1272,136,1084,102"/>
+<area shape="poly" id="edge47_Node000023_Node000021" title=" " alt="" coords="1098,84,1173,84,1173,89,1098,89"/>
+<area shape="poly" id="edge59_Node000024_Node000006" title=" " alt="" coords="578,439,936,445,1165,454,1398,471,1435,475,1434,480,1397,476,1165,460,935,450,578,444"/>
+<area shape="rect" id="Node000025" href="$classUVLCppParser.html#a892754694ed035dea45cc9f103dad6ba" title=" " alt="" coords="639,327,833,353"/>
+<area shape="poly" id="edge51_Node000024_Node000025" title=" " alt="" coords="521,426,690,356,692,361,523,431"/>
+<area shape="poly" id="edge58_Node000025_Node000006" title=" " alt="" coords="761,325,869,278,946,251,1032,228,1125,214,1220,211,1266,216,1312,226,1356,241,1399,262,1426,281,1449,306,1485,361,1508,418,1522,465,1517,466,1503,420,1480,364,1445,309,1422,285,1396,266,1354,246,1311,231,1266,222,1219,217,1126,219,1033,234,947,256,871,283,763,330"/>
+<area shape="rect" id="Node000026" href="$classUVLCppParser.html#a09efcf010d8c1d60c3bac7c2a8d7cc0f" title=" " alt="" coords="895,327,1111,353"/>
+<area shape="poly" id="edge52_Node000025_Node000026" title=" " alt="" coords="833,337,881,337,881,343,833,343"/>
+<area shape="poly" id="edge57_Node000026_Node000006" title=" " alt="" coords="1109,325,1176,323,1250,326,1326,339,1398,363,1434,384,1466,412,1511,466,1507,470,1462,416,1431,389,1396,368,1325,344,1250,332,1176,328,1109,330"/>
+<area shape="rect" id="Node000027" href="$classUVLCppParser.html#a9f0b5a65b77a197875a8f99df92c4401" title=" " alt="" coords="1181,378,1375,403"/>
+<area shape="poly" id="edge53_Node000026_Node000027" title=" " alt="" coords="1073,350,1195,373,1194,378,1072,355"/>
+<area shape="rect" id="Node000028" href="$classUVLCppParser.html#adf901b7ddf2afd1f5505feda82a87914" title=" " alt="" coords="1181,277,1375,302"/>
+<area shape="poly" id="edge55_Node000026_Node000028" title=" " alt="" coords="1072,325,1194,302,1195,307,1073,330"/>
+<area shape="poly" id="edge54_Node000027_Node000006" title=" " alt="" coords="1337,401,1398,420,1450,445,1495,470,1492,475,1448,449,1396,425,1336,406"/>
+<area shape="poly" id="edge56_Node000028_Node000006" title=" " alt="" coords="1357,300,1399,319,1438,353,1471,393,1497,432,1516,466,1511,468,1493,435,1467,396,1434,357,1396,324,1354,305"/>
+<area shape="poly" id="edge62_Node000029_Node000006" title=" " alt="" coords="1051,22,1125,9,1217,3,1265,7,1313,17,1358,34,1399,59,1423,89,1445,134,1465,189,1482,251,1508,374,1524,466,1519,467,1503,375,1477,252,1459,191,1440,136,1419,92,1396,63,1356,39,1311,22,1264,12,1217,9,1125,14,1052,27"/>
+<area shape="poly" id="edge61_Node000029_Node000021" title=" " alt="" coords="1075,48,1194,69,1193,74,1074,53"/>
+<area shape="rect" id="Node000040" href="$classDimacsWriter.html#a054e39b8ee37b55a653eb673ae27a4a5" title="Writes the CNF model to an output stream in DIMACS format." alt="" coords="414,1036,566,1076"/>
+<area shape="poly" id="edge74_Node000039_Node000040" title=" " alt="" coords="315,1053,400,1053,400,1059,315,1059"/>
+<area shape="poly" id="edge78_Node000040_Node000032" title=" " alt="" coords="517,1034,565,1002,624,971,650,962,652,967,626,976,568,1006,520,1038"/>
+<area shape="poly" id="edge79_Node000040_Node000033" title=" " alt="" coords="565,1036,625,1022,666,1012,667,1017,626,1027,567,1041"/>
+<area shape="rect" id="Node000041" href="$classCNFModel.html#a1a4ba08dc405991ebf426b93661914f9" title="Gets the auxiliary variable descriptions." alt="" coords="645,1085,827,1125"/>
+<area shape="poly" id="edge75_Node000040_Node000041" title=" " alt="" coords="567,1069,632,1082,631,1087,566,1074"/>
+<area shape="rect" id="Node000042" href="$classCNFModel.html#a29ea0c45d320cffeed35d4cc7639fd29" title="Gets all CNF clauses." alt="" coords="649,1150,823,1175"/>
+<area shape="poly" id="edge76_Node000040_Node000042" title=" " alt="" coords="520,1074,568,1106,626,1135,652,1144,651,1149,624,1140,566,1110,517,1079"/>
+<area shape="rect" id="Node000043" href="$classCNFModel.html#a99e5613e787c5a2e5972a7b6716912c5" title="Gets the variable ID to feature name mapping." alt="" coords="647,1035,825,1061"/>
+<area shape="poly" id="edge77_Node000040_Node000043" title=" " alt="" coords="566,1051,632,1049,633,1054,566,1056"/>
+</map>

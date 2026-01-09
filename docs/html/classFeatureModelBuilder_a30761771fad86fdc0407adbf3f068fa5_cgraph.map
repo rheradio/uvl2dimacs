@@ -1,0 +1,40 @@
+<map id="exitCardinalityGroup" name="exitCardinalityGroup">
+<area shape="rect" id="Node000001" title="Called when exiting a cardinality group (min..max children selected)" alt="" coords="5,201,163,227"/>
+<area shape="rect" id="Node000002" href="$classUVLCppParser_1_1CardinalityGroupContext.html#a12aa722a4c876365012a831384a6bbb3" title=" " alt="" coords="211,162,417,202"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,200,197,196,197,201,163,206"/>
+<area shape="rect" id="Node000013" href="$classUVLCppParser_1_1CardinalityGroupContext.html#a760ee36f038aa65ac45112c5686e87bf" title=" " alt="" coords="218,226,410,266"/>
+<area shape="poly" id="edge24_Node000001_Node000013" title=" " alt="" coords="163,222,205,228,204,233,163,228"/>
+<area shape="rect" id="Node000003" href="$classUVLCppParser.html#a3898fbe1f42f22008d2658973c4581d6" title=" " alt="" coords="465,201,628,227"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="418,194,452,198,451,204,417,199"/>
+<area shape="poly" id="edge23_Node000003_Node000003" title=" " alt="" coords="513,203,505,193,509,183,523,177,547,175,576,178,587,187,584,192,574,183,547,180,525,182,513,187,510,192,517,200"/>
+<area shape="rect" id="Node000004" href="$classUVLCppParser.html#ae91b421bc8a295b6e7eaad698e5aab92" title=" " alt="" coords="676,201,833,227"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="629,220,662,220,662,226,629,225"/>
+<area shape="poly" id="edge22_Node000004_Node000003" title=" " alt="" coords="676,208,642,208,642,202,676,203"/>
+<area shape="rect" id="Node000005" href="$classUVLCppParser.html#a1acd3ae8059af172b54ac9bd6b44ee53" title=" " alt="" coords="881,151,1065,176"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="810,199,904,177,905,182,811,204"/>
+<area shape="poly" id="edge21_Node000005_Node000003" title=" " alt="" coords="881,172,676,193,623,201,622,196,676,187,881,167"/>
+<area shape="rect" id="Node000006" href="$classUVLCppParser.html#a8a871233dca4f1f47286c3e337760afd" title=" " alt="" coords="1113,125,1291,151"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1066,150,1099,147,1100,152,1066,156"/>
+<area shape="poly" id="edge20_Node000006_Node000003" title=" " alt="" coords="1113,134,1022,131,911,133,793,143,677,165,629,180,587,198,584,193,627,175,675,159,792,138,911,128,1022,126,1113,129"/>
+<area shape="rect" id="Node000007" href="$classUVLCppParser.html#a6f219f8ada5671abfdaa0cf4a2c43784" title=" " alt="" coords="1353,49,1539,89"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1247,123,1361,90,1362,95,1248,128"/>
+<area shape="rect" id="Node000010" href="$classUVLCppParser.html#a88ff205c158c8a1ad2a1023b3e3ee8ad" title=" " alt="" coords="1339,227,1553,252"/>
+<area shape="poly" id="edge13_Node000006_Node000010" title=" " alt="" coords="1235,148,1403,219,1401,224,1233,153"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="1352,64,1217,59,1046,64,954,72,860,86,766,106,677,132,620,161,575,194,572,190,618,156,675,128,765,101,859,81,953,67,1046,59,1217,54,1352,58"/>
+<area shape="rect" id="Node000008" href="$classUVLCppParser.html#ab9c0eb0223d5e0dced81dcc040a3b246" title=" " alt="" coords="1859,31,2045,56"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1540,61,1845,46,1845,51,1540,67"/>
+<area shape="rect" id="Node000009" href="$classUVLCppParser.html#ae6ffbb3f6a4c8cf8d8631d6d1f426085" title=" " alt="" coords="1601,5,1811,31"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="1539,48,1626,31,1627,36,1540,53"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="1912,32,1904,22,1908,12,1925,6,1952,4,1987,8,1997,13,2000,18,1996,21,1993,17,1985,13,1952,9,1926,11,1912,16,1909,22,1916,29"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="1601,18,1203,14,972,14,885,17,818,29,754,53,677,94,644,116,614,142,568,192,564,189,611,138,641,112,675,89,752,48,817,24,885,12,972,9,1203,9,1601,13"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="1811,26,1845,30,1845,35,1811,31"/>
+<area shape="poly" id="edge19_Node000010_Node000003" title=" " alt="" coords="1339,249,1206,254,1040,257,858,254,676,242,613,232,614,227,676,237,858,249,1040,251,1206,249,1339,243"/>
+<area shape="poly" id="edge18_Node000010_Node000004" title=" " alt="" coords="1339,238,847,220,847,215,1339,233"/>
+<area shape="rect" id="Node000011" href="$classUVLCppParser.html#a0f36e81539769da205755ea6f67f8a23" title=" " alt="" coords="1634,303,1778,328"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="1491,249,1649,296,1648,301,1490,255"/>
+<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="1634,318,1203,318,972,318,918,316,863,309,757,287,663,260,591,234,593,229,664,255,758,282,864,304,918,310,972,313,1203,313,1634,313"/>
+<area shape="rect" id="Node000012" href="$classUVLCppParser.html#a868c2012cd9c4be17c4090be89553877" title=" " alt="" coords="1885,328,2019,353"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="1779,320,1872,330,1871,335,1778,325"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="1885,349,1689,361,1447,369,972,369,886,367,819,358,754,339,675,307,617,274,570,238,573,233,620,269,677,302,756,334,820,353,887,361,972,363,1447,363,1689,356,1885,343"/>
+<area shape="poly" id="edge25_Node000013_Node000003" title=" " alt="" coords="410,230,451,224,452,230,411,235"/>
+</map>

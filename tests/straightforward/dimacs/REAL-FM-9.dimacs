@@ -1,0 +1,39 @@
+p cnf 14 24
+c 1 james
+c 2 user_mngt
+c 3 db
+c 4 ldap
+c 5 ws_interface
+c 6 gui
+c 7 pc
+c 8 pda
+c 9 core
+c 10 modules
+c 11 calendar
+c 12 forum
+c 13 congress_mngt
+c 14 repository
+1 0
+-1 2 0
+-2 1 0
+-5 1 0
+-1 6 0
+-6 1 0
+-1 9 0
+-9 1 0
+-1 10 0
+-10 1 0
+-2 3 4 0
+-3 -4 0
+-3 2 0
+-4 2 0
+-6 7 8 0
+-7 6 0
+-8 6 0
+-10 11 12 13 14 0
+-11 10 0
+-12 10 0
+-13 10 0
+-14 10 0
+-8 -14 0
+-13 14 0

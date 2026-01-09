@@ -1,0 +1,8 @@
+<map id="get_features" name="get_features">
+<area shape="rect" id="Node000001" title="Gets all features in the model." alt="" coords="287,31,391,56"/>
+<area shape="rect" id="Node000002" href="$classFeatureModel.html#a03aedc3b62d2069b84622aed4187ecad" title="Gets all relations in the model." alt="" coords="132,5,239,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,35,239,29,240,24,273,30"/>
+<area shape="rect" id="Node000003" href="$classFeatureModel.html#aac993ecccd3d88aafefb6b8e3caa1dee" title="Creates a string representation of the feature model." alt="" coords="5,31,84,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="273,46,84,46,84,41,273,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,33,85,39,84,34,118,27"/>
+</map>

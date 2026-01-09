@@ -1,0 +1,119 @@
+p cnf 44 74
+c 1 doc_gen
+c 2 analysis
+c 3 language_analysis
+c 4 cobol
+c 5 ibm_cobol
+c 6 microfocus_cobol
+c 7 jcl
+c 8 sql
+c 9 delphi
+c 10 progress
+c 11 version_mngt
+c 12 subsystems
+c 13 presentation
+c 14 localization
+c 15 english
+c 16 dutch
+c 17 interaction
+c 18 static
+c 19 dynamic
+c 20 main_pages
+c 21 program_page
+c 22 annotation_section
+c 23 activation_section
+c 24 entities_section
+c 25 parameters_section
+c 26 copybook_page
+c 27 statistics_page
+c 28 with_history
+c 29 without_history
+c 30 indexes
+c 31 search_page
+c 32 subsystem_page
+c 33 source_page
+c 34 source_difference
+c 35 visualizations
+c 36 perform_graph
+c 37 conditional_perform_graph
+c 38 jcl_graph
+c 39 subsystem_graph
+c 40 overview_graph
+c 41 database
+c 42 db2
+c 43 oracle
+c 44 mysql
+1 0
+-1 2 0
+-2 1 0
+-1 13 0
+-13 1 0
+-1 41 0
+-41 1 0
+-2 3 0
+-3 2 0
+-11 2 0
+-12 2 0
+-3 4 7 8 9 10 0
+-4 3 0
+-7 3 0
+-8 3 0
+-9 3 0
+-10 3 0
+-4 5 6 0
+-5 -6 0
+-5 4 0
+-6 4 0
+-13 14 0
+-14 13 0
+-13 17 0
+-17 13 0
+-13 20 0
+-20 13 0
+-35 13 0
+-14 15 16 0
+-15 14 0
+-16 14 0
+-17 18 19 0
+-18 -19 0
+-18 17 0
+-19 17 0
+-20 21 26 27 30 31 32 33 34 0
+-21 20 0
+-26 20 0
+-27 20 0
+-30 20 0
+-31 20 0
+-32 20 0
+-33 20 0
+-34 20 0
+-21 22 23 24 25 0
+-22 21 0
+-23 21 0
+-24 21 0
+-25 21 0
+-27 28 29 0
+-28 -29 0
+-28 27 0
+-29 27 0
+-35 36 37 38 39 40 0
+-36 35 0
+-37 35 0
+-38 35 0
+-39 35 0
+-40 35 0
+-41 42 43 44 0
+-42 -43 0
+-42 -44 0
+-43 -44 0
+-42 41 0
+-43 41 0
+-44 41 0
+-32 12 0
+-39 12 0
+-34 11 0
+-36 4 0
+-37 4 0
+-38 7 0
+-18 -22 0
+-18 -31 0

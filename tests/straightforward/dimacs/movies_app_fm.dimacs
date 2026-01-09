@@ -1,0 +1,37 @@
+p cnf 13 23
+c 1 Movies_App
+c 2 GUI
+c 3 Thin
+c 4 Rich
+c 5 DB
+c 6 Local
+c 7 Remote
+c 8 Cache_Policy
+c 9 Network
+c 10 Wifi
+c 11 Bluetooth
+c 12 GPS
+c 13 Built-In
+1 0
+-1 2 0
+-2 1 0
+-1 5 0
+-5 1 0
+-1 9 0
+-9 1 0
+-12 1 0
+-2 3 4 0
+-3 -4 0
+-3 2 0
+-4 2 0
+-5 6 7 0
+-6 -7 0
+-6 5 0
+-7 5 0
+-7 8 0
+-8 7 0
+-9 10 11 0
+-10 -11 0
+-10 9 0
+-11 9 0
+-13 12 0

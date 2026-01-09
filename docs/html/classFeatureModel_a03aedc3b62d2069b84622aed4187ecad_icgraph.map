@@ -1,0 +1,5 @@
+<map id="get_relations" name="get_relations">
+<area shape="rect" id="Node000001" title="Gets all relations in the model." alt="" coords="132,5,239,31"/>
+<area shape="rect" id="Node000002" href="$classFeatureModel.html#aac993ecccd3d88aafefb6b8e3caa1dee" title="Creates a string representation of the feature model." alt="" coords="5,5,84,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,21,84,21,84,15,118,15"/>
+</map>

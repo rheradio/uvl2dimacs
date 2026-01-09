@@ -1,0 +1,21 @@
+digraph "to_dimacs_string"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="to_dimacs_string",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Converts the CNF model to a DIMACS format string."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="write_to_stream",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classDimacsWriter.html#a054e39b8ee37b55a653eb673ae27a4a5",tooltip="Writes the CNF model to an output stream in DIMACS format."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CNFModel::get_auxiliary\l_variables",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCNFModel.html#a1a4ba08dc405991ebf426b93661914f9",tooltip="Gets the auxiliary variable descriptions."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="CNFModel::get_clauses",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCNFModel.html#a29ea0c45d320cffeed35d4cc7639fd29",tooltip="Gets all CNF clauses."];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CNFModel::get_features",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCNFModel.html#a99e5613e787c5a2e5972a7b6716912c5",tooltip="Gets the variable ID to feature name mapping."];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="CNFModel::get_num_clauses",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCNFModel.html#a6a996ad83d35b9370de6c7a608971df7",tooltip="Gets the total number of clauses."];
+  Node2 -> Node7 [id="edge6_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="CNFModel::get_num_variables",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCNFModel.html#a26d88999e87506faaf8f49c8a456c0aa",tooltip="Gets the total number of variables."];
+}

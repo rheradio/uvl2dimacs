@@ -1,0 +1,13 @@
+digraph "/mnt/c/uvl2dimacs/cli"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  dir_2990d7c532eb7441b74916b8f5365141 [label="cli", fillcolor="#eaf0f6", color="grey25", style="filled,bold", URL="dir_2990d7c532eb7441b74916b8f5365141.html",tooltip=""];
+  dir_572890c148f68441e050f6560d78312b [label="parser", fillcolor="#eaf0f6", color="red", style="filled", URL="dir_572890c148f68441e050f6560d78312b.html",tooltip=""];
+  dir_a5a88cd2797f7c0f81e2cc5851d8e2e2 [label="generator", fillcolor="#eaf0f6", color="red", style="filled", URL="dir_a5a88cd2797f7c0f81e2cc5851d8e2e2.html",tooltip=""];
+  dir_2990d7c532eb7441b74916b8f5365141->dir_572890c148f68441e050f6560d78312b [headlabel="2", labeldistance=1.5 headhref="dir_000001_000007.html" href="dir_000001_000007.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_2990d7c532eb7441b74916b8f5365141->dir_a5a88cd2797f7c0f81e2cc5851d8e2e2 [headlabel="4", labeldistance=1.5 headhref="dir_000001_000003.html" href="dir_000001_000003.html" color="steelblue1" fontcolor="steelblue1"];
+}

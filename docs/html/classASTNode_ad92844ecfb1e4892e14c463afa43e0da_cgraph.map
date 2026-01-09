@@ -1,0 +1,5 @@
+<map id="is_pure_boolean_tree" name="is_pure_boolean_tree">
+<area shape="rect" id="Node000001" title="Checks if this tree contains only boolean operations." alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000002" href="$classASTNode.html#a153076af7d2e3d49dc6a839831c70267" title="Checks if this is a boolean operation." alt="" coords="215,5,376,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,15,201,15,201,21,167,21"/>
+</map>

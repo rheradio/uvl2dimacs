@@ -1,0 +1,20 @@
+<map id="featureCardinality" name="featureCardinality">
+<area shape="rect" id="Node000001" title=" " alt="" coords="655,126,795,151"/>
+<area shape="rect" id="Node000002" href="$classUVLCppParser.html#a62ca054a08a6b169f9d4ed7e0c9e8f28" title=" " alt="" coords="537,126,607,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="641,141,607,141,607,136,641,136"/>
+<area shape="rect" id="Node000003" href="$classUVLCppParser.html#a99880ca4accccae44e69be6eaf545a19" title=" " alt="" coords="406,77,482,102"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="525,123,477,105,479,100,527,118"/>
+<area shape="rect" id="Node000008" href="$classUVLCppParser.html#a760ee36f038aa65ac45112c5686e87bf" title=" " alt="" coords="399,126,489,151"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="523,141,489,141,489,136,523,136"/>
+<area shape="rect" id="Node000004" href="$classUVLCppParser.html#ae99c2a80f4cbfc99a5d005a1072f806b" title=" " alt="" coords="241,77,351,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="393,92,351,92,351,87,393,87"/>
+<area shape="rect" id="Node000005" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a72ec653c82203c79c6967992cdec6768" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,5,193,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="242,75,161,48,162,43,244,70"/>
+<area shape="rect" id="Node000006" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a88a92940148552b068f042783bdca534" title="Convert a UVL file to DIMACS string with specified mode." alt="" coords="5,69,193,109"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="228,92,193,92,193,87,228,87"/>
+<area shape="rect" id="Node000007" href="$uvl2dimacs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="72,134,127,159"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="243,109,194,124,127,142,126,137,193,119,242,104"/>
+<area shape="rect" id="Node000009" href="$classUVLCppParser.html#a510a6f0a352ff7a4cb1561477bf9ee18" title=" " alt="" coords="267,151,325,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="386,151,326,162,325,156,385,146"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="339,164,409,166,489,160,536,148,538,153,490,165,410,171,339,170"/>
+</map>

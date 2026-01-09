@@ -1,0 +1,20 @@
+<map id="get_num_variables" name="get_num_variables">
+<area shape="rect" id="Node000001" title="Gets the total number of variables." alt="" coords="676,154,823,179"/>
+<area shape="rect" id="Node000002" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a72ec653c82203c79c6967992cdec6768" title="Convert a UVL file to DIMACS format with specified mode." alt="" coords="5,96,193,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="662,168,469,162,241,144,193,137,194,132,242,139,469,156,662,163"/>
+<area shape="rect" id="Node000003" href="$classuvl2dimacs_1_1UVL2Dimacs.html#a88a92940148552b068f042783bdca534" title="Convert a UVL file to DIMACS string with specified mode." alt="" coords="5,20,193,60"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="722,147,679,113,627,80,574,54,531,37,486,26,428,16,376,10,335,8,242,16,193,23,193,17,241,11,335,3,376,4,428,11,487,21,532,32,576,49,629,75,682,108,725,143"/>
+<area shape="rect" id="Node000004" href="$uvl2dimacs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="72,186,127,211"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="664,184,628,188,480,198,335,202,127,202,127,197,335,197,480,192,628,183,663,179"/>
+<area shape="rect" id="Node000005" href="$classCNFModel.html#aac993ecccd3d88aafefb6b8e3caa1dee" title="Creates a string representation of the CNF model." alt="" coords="513,255,591,281"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="717,189,629,238,586,258,584,253,627,234,715,184"/>
+<area shape="rect" id="Node000006" href="$classDimacsWriter.html#a054e39b8ee37b55a653eb673ae27a4a5" title="Writes the CNF model to an output stream in DIMACS format." alt="" coords="476,89,628,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="691,153,621,132,622,127,692,148"/>
+<area shape="rect" id="Node000007" href="$classDimacsWriter.html#adb97e4eb71db8f8df39687da38034697" title="Converts the CNF model to a DIMACS format string." alt="" coords="241,25,428,65"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="470,88,402,68,404,63,471,83"/>
+<area shape="rect" id="Node000008" href="$classDimacsWriter.html#af814f31f97070598092811603b6cd1aa" title="Writes the CNF model to a file in DIMACS format." alt="" coords="259,89,411,129"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="462,112,411,112,411,107,462,107"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="227,46,194,45,194,39,227,40"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="245,115,193,116,193,111,245,109"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="269,137,128,191,126,186,267,132"/>
+</map>

@@ -1,0 +1,37 @@
+p cnf 17 19
+1 0
+2 0
+16 0
+17 0
+c 1 jplug
+c 2 interface
+c 3 sdi
+c 4 mdi
+c 5 gui_builder
+c 6 java
+c 7 qt
+c 8 model_code_synch
+c 9 compiler
+c 10 javac
+c 11 mvc
+c 12 diagram_builder
+c 13 uml
+c 14 petri_net
+c 15 aux_1
+c 16 aux_2
+c 17 aux_3
+3 4 0 
+-3 -4 0 
+-5 6 0 
+-6 5 0 
+-7 5 0 
+-9 10 11 0 
+-10 9 0 
+-11 9 0 
+-12 13 0 
+-13 12 0 
+-14 12 0 
+15 3 0 
+-15 -3 0 
+-5 15 0 
+-8 12 0 

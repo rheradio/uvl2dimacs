@@ -1,0 +1,70 @@
+p cnf 23 46
+c 1 weather_station
+c 2 measurements
+c 3 pressure
+c 4 temperature
+c 5 wind_speed
+c 6 data_source
+c 7 internet
+c 8 demo
+c 9 external_services
+c 10 output_format
+c 11 text
+c 12 web_server
+c 13 file
+c 14 format
+c 15 xml
+c 16 html
+c 17 plain_text
+c 18 language
+c 19 english
+c 20 german
+c 21 alarm
+c 22 freeze_point
+c 23 storm_alert
+1 0
+-1 2 0
+-2 1 0
+-1 6 0
+-6 1 0
+-1 10 0
+-10 1 0
+-21 1 0
+-2 3 4 5 0
+-3 2 0
+-4 2 0
+-5 2 0
+-6 7 8 9 0
+-7 -8 0
+-7 -9 0
+-8 -9 0
+-7 6 0
+-8 6 0
+-9 6 0
+-10 11 12 13 0
+-11 -12 0
+-11 -13 0
+-12 -13 0
+-11 10 0
+-12 10 0
+-13 10 0
+-10 14 0
+-14 10 0
+-10 18 0
+-18 10 0
+-14 15 16 17 0
+-15 -16 0
+-15 -17 0
+-16 -17 0
+-15 14 0
+-16 14 0
+-17 14 0
+-18 19 20 0
+-19 -20 0
+-19 18 0
+-20 18 0
+-21 22 23 0
+-22 21 0
+-23 21 0
+-22 4 0
+-11 -15 0

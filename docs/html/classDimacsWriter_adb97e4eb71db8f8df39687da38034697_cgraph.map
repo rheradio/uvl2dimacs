@@ -1,0 +1,15 @@
+<map id="to_dimacs_string" name="to_dimacs_string">
+<area shape="rect" id="Node000001" title="Converts the CNF model to a DIMACS format string." alt="" coords="5,119,139,145"/>
+<area shape="rect" id="Node000002" href="$classDimacsWriter.html#a054e39b8ee37b55a653eb673ae27a4a5" title="Writes the CNF model to an output stream in DIMACS format." alt="" coords="187,119,315,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,129,173,129,173,135,139,135"/>
+<area shape="rect" id="Node000003" href="$classCNFModel.html#a1a4ba08dc405991ebf426b93661914f9" title="Gets the auxiliary variable descriptions." alt="" coords="382,5,565,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,117,308,86,361,55,379,48,381,53,364,60,311,91,269,121"/>
+<area shape="rect" id="Node000004" href="$classCNFModel.html#a29ea0c45d320cffeed35d4cc7639fd29" title="Gets all CNF clauses." alt="" coords="386,70,561,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="307,117,362,104,400,96,401,101,363,109,308,122"/>
+<area shape="rect" id="Node000005" href="$classCNFModel.html#a99e5613e787c5a2e5972a7b6716912c5" title="Gets the variable ID to feature name mapping." alt="" coords="384,119,563,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="315,129,370,129,370,135,315,135"/>
+<area shape="rect" id="Node000006" href="$classCNFModel.html#a6a996ad83d35b9370de6c7a608971df7" title="Gets the total number of clauses." alt="" coords="368,169,579,194"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="309,142,403,163,402,168,308,147"/>
+<area shape="rect" id="Node000007" href="$classCNFModel.html#a26d88999e87506faaf8f49c8a456c0aa" title="Gets the total number of variables." alt="" coords="363,218,584,243"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="269,143,310,173,364,203,388,212,386,217,362,208,307,178,266,147"/>
+</map>

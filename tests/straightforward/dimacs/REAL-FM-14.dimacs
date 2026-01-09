@@ -1,0 +1,47 @@
+p cnf 18 28
+c 1 editor_config
+c 2 backup
+c 3 autosave
+c 4 minutes
+c 5 backup_onchange
+c 6 backup_extension
+c 7 file_bak
+c 8 file_bak_ext
+c 9 file_ext_bak
+c 10 document_class
+c 11 associated_file_ext
+c 12 ext
+c 13 commands
+c 14 remove_blank_lines
+c 15 spell_check
+c 16 dos_unix_conversion
+c 17 syntax_highlighting
+c 18 syntax_definition_file
+1 0
+-1 2 0
+-2 1 0
+-10 1 0
+-3 2 0
+-5 2 0
+-2 6 0
+-6 2 0
+-3 4 0
+-4 3 0
+-6 7 8 9 0
+-7 -8 0
+-7 -9 0
+-8 -9 0
+-7 6 0
+-8 6 0
+-9 6 0
+-10 11 0
+-11 10 0
+-10 13 0
+-13 10 0
+-17 10 0
+-12 11 0
+-14 13 0
+-15 13 0
+-16 13 0
+-17 18 0
+-18 17 0

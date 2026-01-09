@@ -1,0 +1,45 @@
+p cnf 14 30
+c 1 cellphone
+c 2 wireless
+c 3 infrared
+c 4 bluetooth
+c 5 accu_cell
+c 6 li_ion
+c 7 ni_mh
+c 8 ni_ca
+c 9 display
+c 10 color
+c 11 monochrome
+c 12 aux_1
+c 13 aux_2
+c 14 aux_3
+1 0
+-2 1 0
+-1 5 0
+-5 1 0
+-1 9 0
+-9 1 0
+-2 3 4 0
+-3 2 0
+-4 2 0
+-5 6 7 8 0
+-6 -7 0
+-6 -8 0
+-7 -8 0
+-6 5 0
+-7 5 0
+-8 5 0
+-9 10 11 0
+-10 -11 0
+-10 9 0
+-11 9 0
+-12 -4 6 0
+12 4 0
+12 -6 0
+12 0
+13 8 0
+-13 -8 0
+-14 -10 13 0
+14 10 0
+14 -13 0
+14 0
