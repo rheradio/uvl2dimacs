@@ -15,22 +15,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Detect OS and set appropriate compiler
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    # macOS
-    CXX_COMPILER="clang++"
-else
-    # Linux and others - try g++ first, fall back to clang++
-    if command -v g++ >/dev/null 2>&1; then
-        CXX_COMPILER="g++"
-    elif command -v clang++ >/dev/null 2>&1; then
-        CXX_COMPILER="clang++"
-    else
-        echo -e "${RED}Error: No C++ compiler found (tried g++ and clang++)${NC}"
-        exit 1
-    fi
-fi
-
 # Get script directory and project root
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -51,44 +35,26 @@ if [ ! -f "$CLI" ]; then
     exit 1
 fi
 
-# Function to build backbone_solver from scratch (including MiniSat)
-build_backbone_solver() {
-    echo "Building backbone_solver with $CXX_COMPILER..."
-    cd "$PROJECT_ROOT/backbone_solver/src"
-
-    # Clean everything including MiniSat to handle cross-platform builds
-    echo "Cleaning previous build artifacts..."
-    make distclean >/dev/null 2>&1 || true
-
-    # Build (this will also build MiniSat if needed)
-    echo "Compiling..."
-    if ! make CXX="$CXX_COMPILER" 2>&1; then
-        echo -e "${RED}Failed to build backbone_solver${NC}"
-        echo "Check compiler output above for details"
-        cd "$SCRIPT_DIR"
-        return 1
-    fi
-
-    cd "$SCRIPT_DIR"
-    echo -e "${GREEN}backbone_solver built successfully${NC}"
-    return 0
-}
-
 if [ ! -f "$BACKBONE_SOLVER" ]; then
-    echo -e "${YELLOW}backbone_solver not found at $BACKBONE_SOLVER${NC}"
-    if ! build_backbone_solver; then
-        exit 1
-    fi
+    echo -e "${RED}Error: backbone_solver not found at $BACKBONE_SOLVER${NC}"
+    echo "Please build it first with: make backbone_solver"
+    exit 1
 fi
 
 # Check if backbone_solver is executable and for the correct architecture
-# This catches cases where binary was built on a different platform (e.g., macOS vs Linux)
-if ! "$BACKBONE_SOLVER" --help >/dev/null 2>&1 && ! "$BACKBONE_SOLVER" -h >/dev/null 2>&1; then
-    echo -e "${YELLOW}Warning: backbone_solver is not executable or wrong architecture${NC}"
+# Use 'file' command to check architecture instead of running the binary
+# (backbone_solver returns non-zero exit code for -h)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    expected_arch="Mach-O"
+else
+    expected_arch="ELF"
+fi
+
+if ! file "$BACKBONE_SOLVER" | grep -q "$expected_arch"; then
+    echo -e "${RED}Error: backbone_solver is not executable or wrong architecture${NC}"
     echo "This usually happens when switching between macOS and Linux."
-    if ! build_backbone_solver; then
-        exit 1
-    fi
+    echo "Please rebuild with: make clean-backbone && make backbone_solver"
+    exit 1
 fi
 
 if [ ! -d "$UVL_DIR" ]; then

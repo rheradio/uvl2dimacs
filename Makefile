@@ -52,6 +52,7 @@ help:
 	@echo "  test             - Build and run tests"
 	@echo "  clean            - Clean build artifacts"
 	@echo "  clean-all        - Clean everything including ANTLR4 and all dependencies"
+	@echo "  clean-backbone   - Clean backbone solver (including MiniSat)"
 	@echo "  clean-docs       - Clean documentation"
 	@echo "  install          - Install uvl2dimacs binary and examples"
 	@echo ""
@@ -242,16 +243,20 @@ clean:
 
 # Clean everything including ANTLR4 and all dependencies
 .PHONY: clean-all
-clean-all: clean clean-docs
+clean-all: clean clean-docs clean-backbone
 	@echo "Cleaning ANTLR4 runtime..."
 	@rm -rf $(ANTLR4_BUILD)
 	@echo "Cleaning SharpSAT-TD..."
 	@rm -rf $(SHARPSAT_BUILD)
+	@echo "Clean all complete"
+
+# Clean only backbone solver (including MiniSat)
+.PHONY: clean-backbone
+clean-backbone:
 	@echo "Cleaning Backbone Solver (including MiniSat)..."
 	@if [ -f "$(BACKBONE_SRC)/Makefile" ]; then \
 		cd $(BACKBONE_SRC) && $(MAKE) distclean 2>/dev/null || true; \
 	fi
-	@echo "Clean all complete"
 
 # Clean documentation
 .PHONY: clean-docs
