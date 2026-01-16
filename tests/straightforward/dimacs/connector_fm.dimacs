@@ -1,0 +1,58 @@
+p cnf 20 37
+c 1 Connector
+c 2 Paradigm
+c 3 Client/Server
+c 4 Synchronous
+c 5 Timeout
+c 6 Asynchronous
+c 7 Polling
+c 8 Blocking
+c 9 Non-blocking
+c 10 Callback
+c 11 Message-Based
+c 12 Sender
+c 13 Receiver
+c 14 Pull
+c 15 Queued
+c 16 Non-Queued
+c 17 Push
+c 18 Technology
+c 19 CAN
+c 20 Local
+1 0
+-1 2 0
+-2 1 0
+-1 18 0
+-18 1 0
+-2 3 11 0
+-3 -11 0
+-3 2 0
+-11 2 0
+-3 4 6 0
+-4 -6 0
+-4 3 0
+-6 3 0
+-5 4 0
+-6 7 10 0
+-7 -10 0
+-7 6 0
+-10 6 0
+-7 8 9 0
+-8 -9 0
+-8 7 0
+-9 7 0
+-11 12 0
+-12 11 0
+-11 13 0
+-13 11 0
+-13 14 17 0
+-14 -17 0
+-14 13 0
+-17 13 0
+-14 15 16 0
+-15 14 0
+-16 14 0
+-18 19 20 0
+-19 -20 0
+-19 18 0
+-20 18 0

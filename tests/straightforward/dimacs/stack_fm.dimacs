@@ -1,0 +1,46 @@
+p cnf 17 28
+c 1 Stack
+c 2 Size
+c 3 Fixed
+c 4 Value
+c 5 Dynamic
+c 6 Element_Type
+c 7 Integer
+c 8 Float
+c 9 String
+c 10 Optimization
+c 11 Speed
+c 12 Memory_Usage
+c 13 Counter
+c 14 Additional_Features
+c 15 Thread_Safety
+c 16 Bounds_Check
+c 17 Type_Check
+1 0
+-2 1 0
+-1 6 0
+-6 1 0
+-10 1 0
+-13 1 0
+-14 1 0
+-2 3 5 0
+-3 -5 0
+-3 2 0
+-5 2 0
+-3 4 0
+-4 3 0
+-6 7 8 9 0
+-7 -8 0
+-7 -9 0
+-8 -9 0
+-7 6 0
+-8 6 0
+-9 6 0
+-10 11 12 0
+-11 -12 0
+-11 10 0
+-12 10 0
+-14 15 16 17 0
+-15 14 0
+-16 14 0
+-17 14 0

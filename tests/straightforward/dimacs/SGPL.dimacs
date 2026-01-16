@@ -1,0 +1,285 @@
+p cnf 94 190
+c 1 Smart Governance Platform
+c 2 E-Collaboration Common Services
+c 3 Collaboration
+c 4 Decision-Making
+c 5 Assessment
+c 6 Results Assessment
+c 7 Stakeholder Assessment
+c 8 Technical Capabilities
+c 9 DA Support
+c 10 IR Capability
+c 11 KM Support
+c 12 DM Support
+c 13 Individual DM
+c 14 Group DM
+c 15 Consensus
+c 16 Automated DM
+c 17 AI Capability
+c 18 Learning Capability
+c 19 Guarantees
+c 20 Transparency
+c 21 Ethics Control
+c 22 Legal Control
+c 23 Smart Governance Services
+c 24 E-Collaboration Model
+c 25 E-Collaboration Process
+c 26 Process Specific
+c 27 Creation Mode
+c 28 Organization
+c 29 Collaborator
+c 30 Smart Agent
+c 31 Event
+c 32 Access
+c 33 Open
+c 34 Restricted
+c 35 Census
+c 36 Collaborator Type
+c 37 Delegation
+c 38 Representation
+c 39 Anonymous
+c 40 Decision Stage
+c 41 Decision Type
+c 42 Simple
+c 43 Multiple
+c 44 Multiple Ordered
+c 45 Mandatory
+c 46 Binding
+c 47 Weighted
+c 48 Assessment Stage
+c 49 Notification
+c 50 Process Type
+c 51 Urban Process
+c 52 Urban Project
+c 53 Proposal
+c 54 Policy Proposal
+c 55 Normative Proposal
+c 56 Otherl Proposal
+c 57 Deliberation
+c 58 Instrument Making
+c 59 Policy Making
+c 60 Normative Making
+c 61 Budgeting
+c 62 Solution Implementation
+c 63 Consultation
+c 64 Survey
+c 65 Citizen Forum
+c 66 Participatory Consultation
+c 67 Referendum
+c 68 Assessment Process
+c 69 Debate
+c 70 Meeting
+c 71 Agile
+c 72 Qualified
+c 73 Multi-Level
+c 74 Multi-Organization
+c 75 Data-Driven
+c 76 Project-Oriented
+c 77 Networked Processess
+c 78 Smart Assistance
+c 79 Systems Integration
+c 80 Organizational Services
+c 81 E-Notification
+c 82 E-Census
+c 83 E-Voting
+c 84 E-Collaboration
+c 85 External Services
+c 86 Meeting Service
+c 87 Messaging Service
+c 88 E-Mail Service
+c 89 Urban Process Services
+c 90 Urban Project Services
+c 91 Multi-Tenant
+c 92 Graphical User Interface
+c 93 Web Platform
+c 94 Mobile App
+1 0
+-1 2 0
+-2 1 0
+-1 23 0
+-23 1 0
+-91 1 0
+-92 1 0
+-2 3 0
+-3 2 0
+-2 4 0
+-4 2 0
+-5 2 0
+-8 2 0
+-19 2 0
+-5 6 7 0
+-6 5 0
+-7 5 0
+-9 8 0
+-10 8 0
+-11 8 0
+-12 8 0
+-17 8 0
+-18 8 0
+-12 13 14 15 16 0
+-13 12 0
+-14 12 0
+-15 12 0
+-16 12 0
+-20 19 0
+-21 19 0
+-22 19 0
+-23 24 0
+-24 23 0
+-23 79 0
+-79 23 0
+-89 23 0
+-90 23 0
+-24 25 0
+-25 24 0
+-71 24 0
+-72 24 0
+-73 24 0
+-74 24 0
+-75 24 0
+-76 24 0
+-77 24 0
+-78 24 0
+-25 26 0
+-26 25 0
+-40 25 0
+-48 25 0
+-49 25 0
+-50 25 0
+-69 25 0
+-70 25 0
+-26 27 0
+-27 26 0
+-26 32 0
+-32 26 0
+-37 26 0
+-38 26 0
+-39 26 0
+-27 28 29 30 31 0
+-28 27 0
+-29 27 0
+-30 27 0
+-31 27 0
+-32 33 34 35 36 0
+-33 -34 0
+-33 -35 0
+-33 -36 0
+-34 -35 0
+-34 -36 0
+-35 -36 0
+-33 32 0
+-34 32 0
+-35 32 0
+-36 32 0
+-40 41 0
+-41 40 0
+-45 40 0
+-46 40 0
+-47 40 0
+-41 42 43 44 0
+-42 -43 0
+-42 -44 0
+-43 -44 0
+-42 41 0
+-43 41 0
+-44 41 0
+-50 51 52 53 57 58 62 63 68 0
+-51 -52 0
+-51 -53 0
+-51 -57 0
+-51 -58 0
+-51 -62 0
+-51 -63 0
+-51 -68 0
+-52 -53 0
+-52 -57 0
+-52 -58 0
+-52 -62 0
+-52 -63 0
+-52 -68 0
+-53 -57 0
+-53 -58 0
+-53 -62 0
+-53 -63 0
+-53 -68 0
+-57 -58 0
+-57 -62 0
+-57 -63 0
+-57 -68 0
+-58 -62 0
+-58 -63 0
+-58 -68 0
+-62 -63 0
+-62 -68 0
+-63 -68 0
+-51 50 0
+-52 50 0
+-53 50 0
+-57 50 0
+-58 50 0
+-62 50 0
+-63 50 0
+-68 50 0
+-53 54 55 56 0
+-54 -55 0
+-54 -56 0
+-55 -56 0
+-54 53 0
+-55 53 0
+-56 53 0
+-58 59 60 61 0
+-59 -60 0
+-59 -61 0
+-60 -61 0
+-59 58 0
+-60 58 0
+-61 58 0
+-63 64 65 66 0
+-64 -65 0
+-64 -66 0
+-65 -66 0
+-64 63 0
+-65 63 0
+-66 63 0
+-67 66 0
+-79 80 0
+-80 79 0
+-85 79 0
+-81 80 0
+-82 80 0
+-83 80 0
+-84 80 0
+-86 85 0
+-87 85 0
+-88 85 0
+-92 93 94 0
+-93 92 0
+-94 92 0
+-90 76 0
+-74 91 0
+-74 77 0
+-75 9 0
+-78 17 0
+-78 12 0
+-9 17 0
+-11 17 0
+-18 17 0
+-18 12 0
+-21 11 0
+-22 11 0
+-89 90 0
+-40 12 0
+-72 47 0
+-67 46 0
+-48 40 0
+-48 5 0
+-20 49 0
+-53 40 0
+-63 40 0
+-61 40 0
+-57 69 0
+-66 69 0
+-57 31 28 0
+-58 31 28 0
+-63 31 28 0
+-68 48 0

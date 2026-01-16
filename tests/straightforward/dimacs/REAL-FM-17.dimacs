@@ -1,0 +1,76 @@
+p cnf 25 50
+c 1 insurance_product
+c 2 insured_object
+c 3 corporation
+c 4 realty
+c 5 movable_property
+c 6 person
+c 7 coverage
+c 8 illness
+c 9 life
+c 10 unemployment
+c 11 damage
+c 12 loss
+c 13 payment
+c 14 service
+c 15 ammount
+c 16 own_risk
+c 17 conditions
+c 18 acceptance
+c 19 exception
+c 20 premium
+c 21 direct
+c 22 periodical
+c 23 payee
+c 24 _person
+c 25 payee_corporation
+1 0
+-1 2 0
+-2 1 0
+-1 7 0
+-7 1 0
+-1 13 0
+-13 1 0
+-1 17 0
+-17 1 0
+-1 20 0
+-20 1 0
+-1 23 0
+-23 1 0
+-2 3 4 5 6 0
+-3 -4 0
+-3 -5 0
+-3 -6 0
+-4 -5 0
+-4 -6 0
+-5 -6 0
+-3 2 0
+-4 2 0
+-5 2 0
+-6 2 0
+-7 8 9 10 11 12 0
+-8 7 0
+-9 7 0
+-10 7 0
+-11 7 0
+-12 7 0
+-13 14 15 0
+-14 -15 0
+-14 13 0
+-15 13 0
+-16 13 0
+-17 18 0
+-18 17 0
+-17 19 0
+-19 17 0
+-20 21 22 0
+-21 -22 0
+-21 20 0
+-22 20 0
+-23 24 25 0
+-24 23 0
+-25 23 0
+-3 -8 0
+-6 -11 0
+-12 5 0
+-3 25 0
