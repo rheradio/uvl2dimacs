@@ -1,0 +1,75 @@
+namespace Module
+
+features
+	Module
+		mandatory
+			Radar {abstract true}
+				alternative
+					SpinningRadar
+					TheInfinityLockRadar
+					WidthLock
+					TurnMultiplierLock
+					LazyLock
+					SpotlightLock
+					FancyRadar
+					FactorLock
+					MouseRadar
+			Targeting {abstract true}
+				alternative
+					HeadOnTargeting
+					LinearTargeting
+					CircularTargeting
+					PredictiveTargeting
+					RandomTargeting
+					NoTargeting
+					AngularTargeting
+					GuessFactorTargeting
+					SymbolicPatternMatcher
+					PatternMatching
+					PatternMatchingGun
+					BulletShielding
+					AreaTargeting
+					MouseTargeting
+			Movement {abstract true}
+				alternative
+					BasicWallsMovement
+					WallsMovementWithWallSmoothing
+					BasicRandomMovement
+					TimeBasedRandomMovement
+					RandomAreaMovement
+					HeadOnRammingMovement
+					LinearRammingMovement
+					CircularRammingMovement
+					OscillatorMovement
+					NoMovement
+					ButterflyMovement
+					PerpendicularMirrorMovement
+					PointReflectionMirrorMovement
+					RelativeMirrorMovement
+					HorizontalMirrorMovement
+					VerticalMirrorMovement
+					PerpendicularMovement
+					AntiGravityMovement
+					StopAndGoMovement
+					EnemyDodgingMovement
+					CornerMovement
+					DistancingMovement
+					KeyboardMovement
+			SelectEnemy {abstract true}
+				alternative
+					LastScannedSelectEnemy
+					WeakestSelectEnemy
+					StrongestSelectEnemy
+					LeaderSelectEnemy
+			Gun {abstract true}
+				alternative
+					MaximumPowerGun
+					FireWhenEnemyCloseGun
+					DistancePowerGun
+					PowerAccordingToEnergyGun
+					PowerAccordingToEnemyEnergyGun
+					CeaseFireGun
+					ChaseBullet
+					MinimumPowerGun
+					MouseClickGun
+

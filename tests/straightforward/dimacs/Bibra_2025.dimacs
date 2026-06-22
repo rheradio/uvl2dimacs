@@ -1,0 +1,9 @@
+p cnf 4 4
+c 1 Bibra
+c 2 Salad
+c 3 Pokebowls
+c 4 Wraps
+1 0
+-2 1 0
+-3 1 0
+-4 1 0

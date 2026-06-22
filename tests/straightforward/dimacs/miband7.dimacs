@@ -1,0 +1,128 @@
+p cnf 36 91
+c 1 SmartWatch
+c 2 Screen
+c 3 ScreenType
+c 4 OLED
+c 5 CapacityButton
+c 6 AMOLED
+c 7 CapacitivitySensing
+c 8 TouchScreen
+c 9 FullColor
+c 10 Functionalities
+c 11 FitnessMonitor
+c 12 SleepTracker
+c 13 ContactlessPayment
+c 14 VibrateAlert
+c 15 Call
+c 16 Notification
+c 17 Sensors
+c 18 Pedometer
+c 19 MovementFilter
+c 20 Accelerometer
+c 21 Gyroscope
+c 22 Infrared
+c 23 Microphone
+c 24 ProximitySensor
+c 25 HeartRateSensor
+c 26 Photoplethysmogram
+c 27 SpO2
+c 28 Connectivity
+c 29 NFC
+c 30 Bluetooth
+c 31 BLE
+c 32 BLEv40
+c 33 BLEv42
+c 34 BLEv50
+c 35 BLEv52
+c 36 BT40
+1 0
+-2 1 0
+-1 10 0
+-10 1 0
+-1 17 0
+-17 1 0
+-1 28 0
+-28 1 0
+-2 3 0
+-3 2 0
+-8 2 0
+-3 4 6 0
+-4 -6 0
+-4 3 0
+-6 3 0
+-4 5 0
+-5 4 0
+-6 7 0
+-7 6 0
+-9 8 0
+-10 11 0
+-11 10 0
+-10 12 0
+-12 10 0
+-13 10 0
+-10 14 0
+-14 10 0
+-14 15 0
+-15 14 0
+-14 16 0
+-16 14 0
+-17 18 0
+-18 17 0
+-17 20 0
+-20 17 0
+-21 17 0
+-22 17 0
+-23 17 0
+-24 17 0
+-25 17 0
+-27 17 0
+-19 18 0
+-26 25 0
+-29 28 0
+-28 30 0
+-30 28 0
+-30 31 36 0
+-31 -36 0
+-31 30 0
+-36 30 0
+-31 32 33 34 35 0
+-32 -33 0
+-32 -34 0
+-32 -35 0
+-33 -34 0
+-33 -35 0
+-34 -35 0
+-32 31 0
+-33 31 0
+-34 31 0
+-35 31 0
+-19 -25 0
+-19 32 0
+-31 25 19 0
+-36 -2 0
+2 36 0
+-29 8 0
+-8 33 34 35 0
+-6 34 35 0
+-34 6 0
+-35 6 0
+-6 21 0
+-21 6 0
+-6 24 0
+-24 6 0
+-34 9 0
+-35 9 0
+-9 34 35 0
+-22 29 0
+-22 26 0
+-23 29 0
+-23 26 0
+-29 13 0
+-13 29 0
+-26 34 35 0
+-23 26 0
+-22 26 0
+-29 -26 23 0
+-29 -26 22 0
+-27 26 0
+-35 27 0

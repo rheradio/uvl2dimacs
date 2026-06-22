@@ -1,0 +1,30 @@
+p cnf 11 18
+c 1 VIRTUAL_ROOT
+c 2 GSM_Protocol_1900
+c 3 MP3_Recording
+c 4 Camera_Resolution
+c 5 2_1MP
+c 6 5 MP
+c 7 3_1MP
+c 8 Camera
+c 9 Audio_Formats
+c 10 WAV
+c 11 MP3
+1 0
+-1 2 3 4 8 9 0
+-2 1 0
+-3 1 0
+-4 1 0
+-8 1 0
+-9 1 0
+-4 5 6 7 0
+-5 -6 0
+-5 -7 0
+-6 -7 0
+-5 4 0
+-6 4 0
+-7 4 0
+-9 10 11 0
+-10 9 0
+-11 9 0
+-3 11 0

@@ -1,0 +1,36 @@
+p cnf 13 22
+c 1 smartwatch
+c 2 screen
+c 3 touch
+c 4 standard
+c 5 energy management
+c 6 basic
+c 7 advanced solar
+c 8 payment
+c 9 gps
+c 10 sports tracking
+c 11 running
+c 12 skiing
+c 13 hiking
+1 0
+-1 2 0
+-2 1 0
+-1 5 0
+-5 1 0
+-8 1 0
+-9 1 0
+-10 1 0
+-2 3 4 0
+-3 -4 0
+-3 2 0
+-4 2 0
+-5 6 7 0
+-6 -7 0
+-6 5 0
+-7 5 0
+-10 11 12 13 0
+-11 10 0
+-12 10 0
+-13 10 0
+-8 -4 0
+-10 9 0

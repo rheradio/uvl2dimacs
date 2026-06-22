@@ -1,0 +1,78 @@
+p cnf 25 52
+c 1 kwic
+c 2 input_output
+c 3 file
+c 4 console
+c 5 circular_shift
+c 6 shift_data
+c 7 implicit
+c 8 explicit
+c 9 compression
+c 10 shift_processing
+c 11 each_line
+c 12 all_lines
+c 13 noise_words
+c 14 alpha_sort
+c 15 order
+c 16 descendant
+c 17 ascendant
+c 18 case_sensitivity
+c 19 sensitive
+c 20 insensitive
+c 21 arch_style
+c 22 shared_data
+c 23 adt
+c 24 implicit_invocation
+c 25 pipe_and_filter
+1 0
+-1 2 0
+-2 1 0
+-1 5 0
+-5 1 0
+-1 14 0
+-14 1 0
+-1 21 0
+-21 1 0
+-2 3 4 0
+-3 2 0
+-4 2 0
+-5 6 0
+-6 5 0
+-9 5 0
+-6 7 8 0
+-7 -8 0
+-7 6 0
+-8 6 0
+-9 10 0
+-10 9 0
+-9 11 12 0
+-11 -12 0
+-11 9 0
+-12 9 0
+-13 9 0
+-14 15 0
+-15 14 0
+-14 18 0
+-18 14 0
+-15 16 17 0
+-16 -17 0
+-16 15 0
+-17 15 0
+-18 19 20 0
+-19 -20 0
+-19 18 0
+-20 18 0
+-21 22 23 24 25 0
+-22 -23 0
+-22 -24 0
+-22 -25 0
+-23 -24 0
+-23 -25 0
+-24 -25 0
+-22 21 0
+-23 21 0
+-24 21 0
+-25 21 0
+-9 8 0
+-25 12 0
+-25 8 0

@@ -1,0 +1,118 @@
+p cnf 37 80
+c 1 CDODConsistency
+c 2 ODSemantics
+c 3 EmptyOMOD
+c 4 EmptyOMValidInstanceOD
+c 5 EmptyOMInvalidOD
+c 6 CompletenessOD
+c 7 ObjectsOD
+c 8 AllObjectsShownOD
+c 9 AllowObjectsOmittedOD
+c 10 LinksOD
+c 11 AllLinksShownOD
+c 12 AllowLinksOmittedOD
+c 13 AttributesOD
+c 14 AllAttributesShownOD
+c 15 AllowAttributesOmittedOD
+c 16 TypesOD
+c 17 AllTypesShownOD
+c 18 AllowTypesOmittedOD
+c 19 ObjectTypingOD
+c 20 StrictOD
+c 21 NonStrictOD
+c 22 CDSemantics
+c 23 EmptyOMCD
+c 24 EmptyOMValidInstanceCD
+c 25 EmptyOMInvalidCD
+c 26 CompletenessCD
+c 27 AttributesCD
+c 28 AllAttributesShownCD
+c 29 AllowAttributesOmittedCD
+c 30 ClassesCD
+c 31 AllClassesShownCD
+c 32 AllowClassesOmittedCD
+c 33 CDSemantics_33
+c 34 CDSemantics_33_34_35
+c 35 CDSemantics_33_34_36
+c 36 CDSemantics_33_34_37
+c 37 CDSemantics_33_34_39
+1 0
+-1 2 0
+-2 1 0
+-1 22 0
+-22 1 0
+-2 3 0
+-3 2 0
+-2 6 0
+-6 2 0
+-2 19 0
+-19 2 0
+-3 4 5 0
+-4 -5 0
+-4 3 0
+-5 3 0
+-6 7 0
+-7 6 0
+-6 10 0
+-10 6 0
+-6 13 0
+-13 6 0
+-6 16 0
+-16 6 0
+-7 8 9 0
+-8 -9 0
+-8 7 0
+-9 7 0
+-10 11 12 0
+-11 -12 0
+-11 10 0
+-12 10 0
+-13 14 15 0
+-14 -15 0
+-14 13 0
+-15 13 0
+-16 17 18 0
+-17 -18 0
+-17 16 0
+-18 16 0
+-19 20 21 0
+-20 -21 0
+-20 19 0
+-21 19 0
+-22 23 0
+-23 22 0
+-22 26 0
+-26 22 0
+-22 33 0
+-33 22 0
+-23 24 25 0
+-24 -25 0
+-24 23 0
+-25 23 0
+-26 27 0
+-27 26 0
+-26 30 0
+-30 26 0
+-27 28 29 0
+-28 -29 0
+-28 27 0
+-29 27 0
+-30 31 32 0
+-31 -32 0
+-31 30 0
+-32 30 0
+-33 34 35 36 37 0
+-34 -35 0
+-34 -36 0
+-34 -37 0
+-35 -36 0
+-35 -37 0
+-36 -37 0
+-34 33 0
+-35 33 0
+-36 33 0
+-37 33 0
+-9 12 0
+-32 -18 0
+-4 24 0
+-24 4 0

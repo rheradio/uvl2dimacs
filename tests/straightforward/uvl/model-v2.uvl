@@ -1,0 +1,29 @@
+namespace Module
+
+features
+	Module
+		mandatory
+			Radar {abstract true}
+				alternative
+					SpinningRadar
+					MouseRadar
+			Targeting {abstract true}
+				alternative
+					HeadOnTargeting
+					LinearTargeting
+					MouseTargeting
+			Movement {abstract true}
+				alternative
+					NoMovement
+					KeyboardMovement
+			SelectEnemy {abstract true}
+				alternative
+					WeakestSelectEnemy
+					StrongestSelectEnemy
+					ClosestSelectEnemy
+			Gun {abstract true}
+				alternative
+					MaximumPowerGun
+					CeaseFireGun
+					MouseClickGun
+

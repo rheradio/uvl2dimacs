@@ -1,0 +1,39 @@
+p cnf 14 24
+c 1 Onlineshop
+c 2 Payment
+c 3 Debit Card
+c 4 Credit Card
+c 5 Product Selection
+c 6 Catalog
+c 7 Categories
+c 8 Sort
+c 9 Search
+c 10 UserManagement
+c 11 Orders
+c 12 Security
+c 13 Payments
+c 14 Wishlist
+1 0
+-1 2 0
+-2 1 0
+-1 5 0
+-5 1 0
+-10 1 0
+-2 3 4 0
+-3 -4 0
+-3 2 0
+-4 2 0
+-5 6 0
+-6 5 0
+-9 5 0
+-7 6 0
+-8 6 0
+-10 11 12 13 14 0
+-11 10 0
+-12 10 0
+-13 10 0
+-14 10 0
+-9 12 0
+-12 -13 0
+-13 -12 0
+8 9 0

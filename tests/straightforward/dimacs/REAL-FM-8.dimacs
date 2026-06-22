@@ -1,0 +1,49 @@
+p cnf 17 31
+c 1 monitor_engine_system
+c 2 engine_performance
+c 3 temperatures
+c 4 colant
+c 5 oil
+c 6 engine
+c 7 transmission
+c 8 rpm
+c 9 exhaust_level_temp
+c 10 fuel_consumption
+c 11 measures
+c 12 l_km
+c 13 gallon_mile
+c 14 methods
+c 15 distance
+c 16 type_of_driving
+c 17 drive
+1 0
+-1 2 0
+-2 1 0
+-1 10 0
+-10 1 0
+-2 3 0
+-3 2 0
+-2 8 0
+-8 2 0
+-2 9 0
+-9 2 0
+-4 3 0
+-3 5 0
+-5 3 0
+-3 6 0
+-6 3 0
+-3 7 0
+-7 3 0
+-10 11 0
+-11 10 0
+-10 14 0
+-14 10 0
+-11 12 13 0
+-12 -13 0
+-12 11 0
+-13 11 0
+-14 15 16 17 0
+-15 14 0
+-16 14 0
+-17 14 0
+-17 8 0

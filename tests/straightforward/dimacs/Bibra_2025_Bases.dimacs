@@ -1,0 +1,24 @@
+p cnf 6 17
+c 1 Bases
+c 2 Mixed lettuce
+c 3 Wild arugula
+c 4 Lamb's lettuce
+c 5 Sushi rice
+c 6 Brown rice
+1 0
+-1 2 3 4 5 6 0
+-2 -3 0
+-2 -4 0
+-2 -5 0
+-2 -6 0
+-3 -4 0
+-3 -5 0
+-3 -6 0
+-4 -5 0
+-4 -6 0
+-5 -6 0
+-2 1 0
+-3 1 0
+-4 1 0
+-5 1 0
+-6 1 0

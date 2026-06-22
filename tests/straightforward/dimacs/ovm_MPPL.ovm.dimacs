@@ -1,0 +1,26 @@
+p cnf 10 15
+c 1 VIRTUAL_ROOT
+c 2 Messaging
+c 3 SMS
+c 4 MMS
+c 5 Utility Features
+c 6 Calculator
+c 7 Currency Exchange
+c 8 OS
+c 9 Symbian
+c 10 WinCE
+1 0
+-1 2 5 8 0
+-2 1 0
+-5 1 0
+-8 1 0
+-2 3 4 0
+-3 2 0
+-4 2 0
+-6 5 0
+-7 5 0
+-8 9 10 0
+-9 -10 0
+-9 8 0
+-10 8 0
+-7 6 0
